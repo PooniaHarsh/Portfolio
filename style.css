@@ -171,12 +171,12 @@ body::before {
     }
 }
 
-/* @media (max-width: 940px) {
+@media (max-width: 940px) {
     .hero-intro {
         font-size: 4rem;
         margin-bottom: 29rem;
     }
-} */
+}
 
 @media (min-width: 768px) {
     .hero-name {
