@@ -1,0 +1,890 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Dora - Mary Hardy Portfolio
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+    font-family: "Poppins", sans-serif;
+   }
+
+   /* Typing animation */
+   .typing {
+    border-right: 2px solid #0f1a3c;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(25) infinite, blink 0.75s step-end infinite;
+    font-weight: 600;
+    font-size: 0.875rem; /* sm:text-sm */
+    color: #0f1a3c;
+    margin-bottom: 0.75rem; /* mb-3 */
+   }
+
+   @keyframes typing {
+    0% {
+     width: 0;
+    }
+    50% {
+     width: 15ch; /* length of text */
+    }
+    100% {
+     width: 0;
+    }
+   }
+
+   @keyframes blink {
+    50% {
+     border-color: transparent;
+    }
+   }
+
+   /* Liquid glass effect container */
+   .liquid-glass {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 1.5rem; /* rounded-3xl */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.3s ease;
+   }
+
+   .liquid-glass:hover {
+    box-shadow: 0 8px 40px rgba(255, 151, 22, 0.5),
+      0 0 15px rgba(255, 151, 22, 0.3);
+   }
+
+   /* Icon background with subtle glass effect */
+   .icon-glass {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 9999px; /* rounded-full */
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.6),
+      0 2px 6px rgba(255, 151, 22, 0.4);
+    transition: box-shadow 0.3s ease;
+   }
+
+   .icon-glass:hover {
+    box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.8),
+      0 4px 12px rgba(255, 151, 22, 0.7);
+   }
+
+   /* Glass effect for service cards */
+   .service-glass {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem; /* rounded-lg */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    color: #0f1a3c;
+    user-select: none;
+   }
+
+   .service-glass:hover {
+    box-shadow: 0 8px 40px rgba(255, 151, 22, 0.5),
+      0 0 15px rgba(255, 151, 22, 0.3);
+   }
+
+   /* Circle progress bar container */
+   .circle-progress {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem auto;
+   }
+   /* SVG styles */
+   svg {
+    transform: rotate(-90deg);
+    width: 100px;
+    height: 100px;
+   }
+   circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+   }
+   .circle-bg {
+    stroke: #d1d5db; /* Tailwind gray-300 */
+   }
+   .circle-bar {
+    stroke: #f97316; /* Tailwind orange-500 */
+    stroke-dasharray: 283; /* 2 * PI * 45 (radius) */
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 2s ease;
+   }
+   /* Centered percentage text */
+   .circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    color: #0f1a3c;
+    font-size: 1.25rem;
+    user-select: none;
+   }
+
+   /* Improved nav button styles */
+   #nav-toggle {
+    background-color: #f97316;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem; /* rounded-md */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    font-size: 1.25rem;
+   }
+   #nav-toggle:hover {
+    background-color: #e25800;
+   }
+   #nav-toggle:focus {
+    outline: 2px solid #f97316;
+    outline-offset: 2px;
+   }
+
+   /* Mobile menu styles */
+   #mobile-menu {
+    display: none;
+   }
+   #mobile-menu.active {
+    display: block;
+   }
+
+   /* Text animation */
+   .animate-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+   }
+   .animate-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+   }
+  </style>
+ </head>
+ <body class="bg-[#fff9f8] text-[#0f1a3c]">
+  <header class="flex justify-between items-center px-6 sm:px-10 md:px-16 lg:px-24 py-6 sticky top-0 bg-[#fff9f8] z-50 shadow-sm">
+   <div class="text-2xl font-extrabold text-[#0f1a3c] flex items-center animate-text">
+    Dora
+    <span class="text-[#f97316]">
+     .
+    </span>
+   </div>
+   <nav aria-label="Primary Navigation" class="hidden md:flex space-x-8 text-sm font-medium">
+    <a class="text-[#f97316] animate-text" href="#">
+     Home
+    </a>
+    <a class="hover:text-[#f97316] transition animate-text" href="#">
+     Services
+    </a>
+    <a class="hover:text-[#f97316] transition animate-text" href="#">
+     Works
+    </a>
+    <div class="relative group animate-text">
+     <button aria-expanded="false" aria-haspopup="true" class="flex items-center space-x-1 hover:text-[#f97316] transition text-sm font-medium">
+      <span>
+       Blog
+      </span>
+      <i class="fas fa-chevron-down text-xs">
+      </i>
+     </button>
+    </div>
+    <a class="hover:text-[#f97316] transition animate-text" href="#">
+     Contact
+    </a>
+   </nav>
+   <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu" class="md:hidden animate-text" id="nav-toggle" type="button">
+    <i aria-hidden="true" class="fas fa-bars mr-2">
+    </i>
+    Menu
+   </button>
+  </header>
+  <nav aria-label="Mobile Navigation" class="md:hidden bg-[#fff9f8] px-6 pb-6 space-y-4 text-sm font-medium shadow-md" id="mobile-menu">
+   <a class="block text-[#f97316]" href="#">
+    Home
+   </a>
+   <a class="block hover:text-[#f97316] transition" href="#">
+    Services
+   </a>
+   <a class="block hover:text-[#f97316] transition" href="#">
+    Works
+   </a>
+   <a class="block hover:text-[#f97316] transition" href="#">
+    Blog
+   </a>
+   <a class="block hover:text-[#f97316] transition" href="#">
+    Contact
+   </a>
+  </nav>
+  <main class="px-6 sm:px-10 md:px-16 lg:px-24">
+   <!-- Hero Section -->
+   <section class="relative flex flex-col md:flex-row items-center md:items-start md:justify-between pt-6 md:pt-12 animate-text">
+    <div class="max-w-xl md:max-w-lg lg:max-w-xl">
+     <p class="text-[#f97316] font-semibold text-sm mb-1">
+      Hi, I’m
+     </p>
+     <h1 class="text-[#0f1a3c] font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight mb-2">
+      Mary Hardy
+     </h1>
+     <p class="typing">
+      Digital Marketing Expert
+     </p>
+     <p class="text-[10px] sm:text-xs text-[#7a7a7a] mb-6 max-w-md">
+      Shot what able cold new the see hold. Friendly as on betrayed formerly he,
+      Morning because as to society behaved moments
+     </p>
+     <div class="flex space-x-4">
+      <button class="bg-[#f97316] text-white text-xs sm:text-sm font-semibold rounded-full px-5 py-2 hover:bg-[#e25800] transition">
+       Download CV
+      </button>
+      <button class="border border-[#f97316] text-[#f97316] text-xs sm:text-sm font-semibold rounded-full px-5 py-2 hover:bg-[#f97316] hover:text-white transition">
+       Contact
+      </button>
+     </div>
+    </div>
+    <div class="relative mt-10 md:mt-0 flex justify-center md:justify-end w-full md:w-auto animate-text">
+     <div aria-hidden="true" class="absolute -right-10 top-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-[#f97316] opacity-90">
+     </div>
+     <div aria-hidden="true" class="absolute -right-20 top-1/2 -translate-y-1/2 w-52 h-52 rounded-full bg-[#fcd9d7] opacity-40">
+     </div>
+     <img alt="Smiling man with beard wearing red plaid shirt" class="relative rounded-lg max-w-[300px] w-full" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6f135ce8-8315-4752-6b6f-4006c635e23c.jpg" width="300"/>
+    </div>
+   </section>
+   <!-- Liquid Glass Stats Section -->
+   <section class="liquid-glass max-w-4xl mx-auto mt-10 py-6 px-6 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-6 animate-text">
+    <div class="flex items-center space-x-4">
+     <div class="icon-glass p-3 rounded-full flex items-center justify-center text-white text-lg bg-[#f97316]">
+      <i class="fas fa-cog">
+      </i>
+     </div>
+     <div>
+      <p class="font-bold text-sm text-[#0f1a3c]">
+       8 years job
+      </p>
+      <p class="text-xs text-[#f97316] font-semibold">
+       Experience
+      </p>
+     </div>
+    </div>
+    <div class="flex items-center space-x-4">
+     <div class="icon-glass p-3 rounded-full flex items-center justify-center text-white text-lg bg-[#f97316]">
+      <i class="fas fa-clipboard-list">
+      </i>
+     </div>
+     <div>
+      <p class="font-bold text-sm text-[#0f1a3c]">
+       500+ Projects
+      </p>
+      <p class="text-xs text-[#f97316] font-semibold">
+       Completed
+      </p>
+     </div>
+    </div>
+    <div class="flex items-center space-x-4">
+     <div class="icon-glass p-3 rounded-full flex items-center justify-center text-white text-lg bg-[#f97316]">
+      <i class="fas fa-headphones-alt">
+      </i>
+     </div>
+     <div>
+      <p class="font-bold text-sm text-[#0f1a3c]">
+       Online 24/7
+      </p>
+      <p class="text-xs text-[#f97316] font-semibold">
+       Support
+      </p>
+     </div>
+    </div>
+   </section>
+   <!-- Services Section -->
+   <section class="mt-20 max-w-7xl mx-auto animate-text">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-8 px-2 md:px-0">
+     <div class="mb-6 md:mb-0 max-w-xs md:max-w-sm">
+      <p class="text-[#f97316] font-semibold text-xs mb-1">
+       Services
+      </p>
+      <h2 class="text-[#0f1a3c] font-extrabold text-xl sm:text-2xl leading-snug">
+       I Provide Wide Range Of Digital Services
+      </h2>
+     </div>
+     <div class="flex space-x-3 items-center">
+      <button aria-label="Previous" class="w-8 h-8 rounded-full bg-[#e5e5e5] text-[#7a7a7a] flex items-center justify-center hover:bg-[#f97316] hover:text-white transition">
+       <i class="fas fa-chevron-left text-xs">
+       </i>
+      </button>
+      <button aria-label="Next" class="w-8 h-8 rounded-full bg-[#f97316] text-white flex items-center justify-center hover:bg-[#e25800] transition">
+       <i class="fas fa-plus text-xs">
+       </i>
+      </button>
+     </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-2 md:px-0">
+     <div class="service-glass rounded-lg shadow-md p-6 text-center flex flex-col items-center animate-text">
+      <div class="bg-purple-600 text-white p-4 rounded-full mb-4 text-2xl flex items-center justify-center w-14 h-14">
+       <i class="fas fa-paint-brush">
+       </i>
+      </div>
+      <h3 class="font-bold text-sm mb-1">
+       UI/UX Design
+      </h3>
+      <p class="text-[10px] text-[#7a7a7a] leading-tight">
+       Rror te inal desigq othe fal dveoper age your adocsed men Mageeet
+       speists
+      </p>
+     </div>
+     <div class="service-glass rounded-lg shadow-md p-6 text-center flex flex-col items-center animate-text">
+      <div class="bg-yellow-400 text-white p-4 rounded-full mb-4 text-2xl flex items-center justify-center w-14 h-14">
+       <i class="fas fa-file-code">
+       </i>
+      </div>
+      <h3 class="font-bold text-sm mb-1">
+       Web Design
+      </h3>
+      <p class="text-[10px] text-[#7a7a7a] leading-tight">
+       Rror te inal desigq othe fal dveoper age your adocsed men Mageeet
+       speists
+      </p>
+     </div>
+     <div class="service-glass rounded-lg shadow-md p-6 text-center flex flex-col items-center animate-text">
+      <div class="bg-pink-500 text-white p-4 rounded-full mb-4 text-2xl flex items-center justify-center w-14 h-14">
+       <i class="fas fa-bullhorn">
+       </i>
+      </div>
+      <h3 class="font-bold text-sm mb-1">
+       Digital Marketing
+      </h3>
+      <p class="text-[10px] text-[#7a7a7a] leading-tight">
+       Rror te inal desigq othe fal dveoper age your adocsed men Mageeet
+       speists
+      </p>
+     </div>
+     <div class="service-glass rounded-lg shadow-md p-6 text-center flex flex-col items-center animate-text">
+      <div class="bg-cyan-500 text-white p-4 rounded-full mb-4 text-2xl flex items-center justify-center w-14 h-14">
+       <i class="fas fa-mobile-alt">
+       </i>
+      </div>
+      <h3 class="font-bold text-sm mb-1">
+       App Development
+      </h3>
+      <p class="text-[10px] text-[#7a7a7a] leading-tight">
+       Rror te inal desigq othe fal dveoper age your adocsed men Mageeet
+       speists
+      </p>
+     </div>
+    </div>
+   </section>
+   <!-- Experience Section -->
+   <section class="mt-20 max-w-6xl mx-auto px-2 md:px-0 animate-text" id="experience-section" style="">
+    <p class="text-[#f97316] font-semibold text-xs text-center mb-1">
+     Why Choose Me
+    </p>
+    <h2 class="text-[#0f1a3c] font-extrabold text-xl sm:text-2xl text-center mb-10">
+     My Experience Area
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto text-xs sm:text-sm">
+     <div class="mb-10 flex flex-col items-center" data-label="Facebook Marketing" data-percent="95">
+      <div class="circle-progress">
+       <svg>
+        <circle class="circle-bg" cx="50" cy="50" r="45">
+        </circle>
+        <circle class="circle-bar" cx="50" cy="50" r="45">
+        </circle>
+       </svg>
+       <div class="circle-text">
+        0%
+       </div>
+      </div>
+      <div class="mt-2 font-semibold text-[#0f1a3c] text-center">
+       Facebook Marketing
+      </div>
+     </div>
+     <div class="mb-10 flex flex-col items-center" data-label="Search Engine Optimization" data-percent="90">
+      <div class="circle-progress">
+       <svg>
+        <circle class="circle-bg" cx="50" cy="50" r="45">
+        </circle>
+        <circle class="circle-bar" cx="50" cy="50" r="45">
+        </circle>
+       </svg>
+       <div class="circle-text">
+        0%
+       </div>
+      </div>
+      <div class="mt-2 font-semibold text-[#0f1a3c] text-center">
+       Search Engine Optimization
+      </div>
+     </div>
+     <div class="mb-10 flex flex-col items-center" data-label="Content Writing" data-percent="95">
+      <div class="circle-progress">
+       <svg>
+        <circle class="circle-bg" cx="50" cy="50" r="45">
+        </circle>
+        <circle class="circle-bar" cx="50" cy="50" r="45">
+        </circle>
+       </svg>
+       <div class="circle-text">
+        0%
+       </div>
+      </div>
+      <div class="mt-2 font-semibold text-[#0f1a3c] text-center">
+       Content Writing
+      </div>
+     </div>
+     <div class="mb-10 flex flex-col items-center" data-label="Youtube Marketing" data-percent="72">
+      <div class="circle-progress">
+       <svg>
+        <circle class="circle-bg" cx="50" cy="50" r="45">
+        </circle>
+        <circle class="circle-bar" cx="50" cy="50" r="45">
+        </circle>
+       </svg>
+       <div class="circle-text">
+        0%
+       </div>
+      </div>
+      <div class="mt-2 font-semibold text-[#0f1a3c] text-center">
+       Youtube Marketing
+      </div>
+     </div>
+     <div class="mb-10 flex flex-col items-center" data-label="Affiliate Marketing" data-percent="80">
+      <div class="circle-progress">
+       <svg>
+        <circle class="circle-bg" cx="50" cy="50" r="45">
+        </circle>
+        <circle class="circle-bar" cx="50" cy="50" r="45">
+        </circle>
+       </svg>
+       <div class="circle-text">
+        0%
+       </div>
+      </div>
+      <div class="mt-2 font-semibold text-[#0f1a3c] text-center">
+       Affiliate Marketing
+      </div>
+     </div>
+     <div class="mb-10 flex flex-col items-center" data-label="Graphic Design" data-percent="85">
+      <div class="circle-progress">
+       <svg>
+        <circle class="circle-bg" cx="50" cy="50" r="45">
+        </circle>
+        <circle class="circle-bar" cx="50" cy="50" r="45">
+        </circle>
+       </svg>
+       <div class="circle-text">
+        0%
+       </div>
+      </div>
+      <div class="mt-2 font-semibold text-[#0f1a3c] text-center">
+       Graphic Design
+      </div>
+     </div>
+     <div class="mb-10 flex flex-col items-center" data-label="Web Ui Design" data-percent="49">
+      <div class="circle-progress">
+       <svg>
+        <circle class="circle-bg" cx="50" cy="50" r="45">
+        </circle>
+        <circle class="circle-bar" cx="50" cy="50" r="45">
+        </circle>
+       </svg>
+       <div class="circle-text">
+        0%
+       </div>
+      </div>
+      <div class="mt-2 font-semibold text-[#0f1a3c] text-center">
+       Web Ui Design
+      </div>
+     </div>
+     <div class="mb-10 flex flex-col items-center" data-label="Web Design" data-percent="70">
+      <div class="circle-progress">
+       <svg>
+        <circle class="circle-bg" cx="50" cy="50" r="45">
+        </circle>
+        <circle class="circle-bar" cx="50" cy="50" r="45">
+        </circle>
+       </svg>
+       <div class="circle-text">
+        0%
+       </div>
+      </div>
+      <div class="mt-2 font-semibold text-[#0f1a3c] text-center">
+       Web Design
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Portfolio Section -->
+   <section class="mt-20 max-w-7xl mx-auto px-2 md:px-0 animate-text">
+    <p class="text-[#f97316] font-semibold text-xs text-center mb-1">
+     Portfolio
+    </p>
+    <h2 class="text-[#0f1a3c] font-extrabold text-xl sm:text-2xl text-center mb-4">
+     My Amazing Works
+    </h2>
+    <div class="flex justify-center space-x-4 text-xs sm:text-sm mb-8">
+     <button class="text-[#f97316] font-semibold">
+      All
+     </button>
+     <button class="hover:text-[#f97316] transition">
+      Youtube
+     </button>
+     <button class="hover:text-[#f97316] transition">
+      Vimeo
+     </button>
+     <button class="hover:text-[#f97316] transition">
+      Details
+     </button>
+     <button class="hover:text-[#f97316] transition">
+      Popup
+     </button>
+     <button class="hover:text-[#f97316] transition">
+      Soundcloud
+     </button>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+     <img alt="Wooden house on stilts at sunset with moon in sky" class="rounded-lg object-cover w-full h-48 sm:h-60" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/771266d2-63cf-4d1a-b6d8-296a263cf8ff.jpg" width="400"/>
+     <img alt="Colorful decorative umbrellas hanging over street" class="rounded-lg object-cover w-full h-48 sm:h-60" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0a13343e-19c3-4199-22b0-d4de36d05db9.jpg" width="400"/>
+     <img alt="Tablet with colorful design and pens on white desk" class="rounded-lg object-cover w-full h-48 sm:h-60" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/d00f5823-c349-41ac-e97d-7a923b63dc63.jpg" width="400"/>
+     <img alt="Curved ceiling with patterned tiles and windows" class="rounded-lg object-cover w-full h-48 sm:h-60" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/bcdbc4b5-3a20-471e-695f-50047f0b9ee4.jpg" width="400"/>
+     <img alt="Colorful amusement park ride against blue sky" class="rounded-lg object-cover w-full h-48 sm:h-60" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e07c4b8a-cb0e-418f-d6fc-18a823f1c6f7.jpg" width="400"/>
+     <img alt="Vintage typewriter with orange candle on wooden table" class="rounded-lg object-cover w-full h-48 sm:h-60" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/cf91fd9f-86db-4358-ae01-6ac7b9d5af00.jpg" width="400"/>
+    </div>
+   </section>
+  </main>
+  <script>
+   // Mobile menu toggle
+    const navToggle = document.getElementById("nav-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    navToggle.addEventListener("click", () => {
+      const expanded =
+        navToggle.getAttribute("aria-expanded") === "true" ? "false" : "true";
+      navToggle.setAttribute("aria-expanded", expanded);
+      mobileMenu.classList.toggle("active");
+    });
+
+    // Animate circular progress bars and numbers on scroll into view
+    document.addEventListener("DOMContentLoaded", () => {
+      const experienceSection = document.getElementById("experience-section");
+      const items = experienceSection.querySelectorAll("[data-percent]");
+      let animated = false;
+
+      function animateCircle(circleBar, circleText, targetPercent) {
+        const radius = 45;
+        const circumference = 2 * Math.PI * radius;
+        let currentPercent = 0;
+        circleBar.style.strokeDasharray = circumference;
+        circleBar.style.strokeDashoffset = circumference;
+
+        const duration = 2000; // 2 seconds
+        const stepTime = 20; // ms
+        const steps = duration / stepTime;
+        const increment = targetPercent / steps;
+
+        let stepCount = 0;
+        const interval = setInterval(() => {
+          stepCount++;
+          currentPercent += increment;
+          if (currentPercent >= targetPercent) {
+            currentPercent = targetPercent;
+            clearInterval(interval);
+          }
+          const offset = circumference - (currentPercent / 100) * circumference;
+          circleBar.style.strokeDashoffset = offset;
+          circleText.textContent = Math.round(currentPercent) + "%";
+        }, stepTime);
+      }
+
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.bottom >= 0
+        );
+      }
+
+      function onScroll() {
+        if (!animated && isInViewport(experienceSection)) {
+          items.forEach((item) => {
+            const percent = parseInt(item.getAttribute("data-percent"));
+            const circleBar = item.querySelector(".circle-bar");
+            const circleText = item.querySelector(".circle-text");
+            animateCircle(circleBar, circleText, percent);
+          });
+          animated = true;
+          window.removeEventListener("scroll", onScroll);
+        }
+      }
+
+      window.addEventListener("scroll", onScroll);
+      onScroll();
+    });
+
+    // Animate all text elements with class 'animate-text' on scroll
+    function animateTextsOnScroll() {
+      const animatedTexts = document.querySelectorAll(".animate-text");
+      animatedTexts.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.85) {
+          el.classList.add("visible");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", animateTextsOnScroll);
+    window.addEventListener("load", animateTextsOnScroll);
+  </script>
+ 
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Card with Apple Map Hover Animation</title>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background Shape -->
+  <div class="background-shape"></div>
+
+  <!-- Contact Card -->
+  <div class="card">
+    <!-- Text Section -->
+    <div class="card-text">
+      <h1>Say hello to us!</h1>
+      <p>
+        Let’s talk business or just have a coffee.<br/>
+        We would love to hear from you!
+      </p>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <div>
+          <span>Address</span><br/>
+          1066 Budapest, Zichy Jenő street 2.
+        </div>
+        <div>
+          <span>Phone</span><br/>
+          +36 60 876 543
+        </div>
+        <div>
+          <span>E-mail</span><br/>
+          hello@letstalk.com
+        </div>
+      </div>
+
+      <!-- Button -->
+      <button class="primary-btn">Copy E-mail address</button>
+    </div>
+
+    <!-- Map + Socials -->
+    <div class="card-right">
+      <iframe
+        id="map"
+        src="https://maps.apple.com/embed?address=1066%20Budapest,%20Zichy%20Jen%C5%91%20street%202&ll=47.4979,19.0402&z=15"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Apple Map showing location of 1066 Budapest, Zichy Jenő street 2"
+        aria-label="Apple Map showing location of 1066 Budapest, Zichy Jenő street 2">
+      </iframe>
+
+      <!-- Social Buttons -->
+      <div class="socials">
+        <button aria-label="Facebook" class="social-btn"><i class="fab fa-facebook-f"></i></button>
+        <button aria-label="Dribbble" class="social-btn"><i class="fab fa-dribbble"></i></button>
+        <button aria-label="Behance" class="social-btn"><i class="fab fa-behance"></i></button>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
+  <style>
+
+
+  /* Global Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, #1E73E8, #2A8BFF);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Shape */
+.background-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 12rem;
+  background: #F3F7FA;
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+  z-index: 0;
+}
+
+/* Card */
+.card {
+  position: relative;
+  z-index: 10;
+  max-width: 1000px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    padding: 4rem;
+  }
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(30, 115, 232, 0.4);
+}
+
+/* Card Left Text */
+.card-text {
+  max-width: 600px;
+}
+
+.card-text h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.card-text p {
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+  color: #3B82F6;
+  margin-bottom: 2rem;
+  max-width: 320px;
+}
+
+.contact-info {
+  margin-bottom: 1.5rem;
+  font-size: 0.75rem;
+  color: #374151;
+}
+
+.contact-info div {
+  margin-bottom: 1rem;
+}
+
+.contact-info span {
+  color: #3B82F6;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Primary Button */
+.primary-btn {
+  background-color: #1E73E8;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(30, 115, 232, 0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #1666d6;
+  transform: translateY(-3px);
+}
+
+/* Right Side (Map + Socials) */
+.card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+#map {
+  width: 400px;
+  max-width: 100%;
+  height: 320px;
+  border-radius: 8px;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+  transition: transform 0.3s ease;
+}
+
+.card:hover #map {
+  transform: translateY(-10px) scale(1.03);
+  filter: drop-shadow(0 30px 50px rgba(0,0,0,0.15));
+}
+
+/* Social Buttons */
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-btn {
+  background-color: #1E73E8;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(30, 115, 232, 0.4);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: #1666d6;
+  transform: translateY(-3px);
+}
+</style>
+
+</body>
+</html>

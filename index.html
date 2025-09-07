@@ -1,0 +1,628 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>
+        Harsh Poonia Portfolio
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylee.css" />
+</head>
+
+<body class="bg-[#fff9f8] text-[#0f1a3c]">
+    <header
+        class="flex justify-between items-center px-6 sm:px-10 md:px-16 lg:px-24 py-6 sticky top-0 bg-gradient-to-r from-[#fff9f8] to-[#f5f0ef] backdrop-blur-sm z-50 shadow-sm">
+        <div class="text-2xl font-extrabold text-[#0f1a3c] flex items-center animate-text">
+            PORTFOLIO
+            <span class="text-[#f97316]">
+                .
+            </span>
+        </div>
+        <nav aria-label="Primary Navigation" class="hidden md:flex space-x-8 text-sm font-medium">
+            <a class="text-[#f97316] animate-text" href="#">
+                Home
+            </a>
+            <a class="hover:text-[#f97316] transition animate-text" href="#">
+                Services
+            </a>
+            <a class="hover:text-[#f97316] transition animate-text" href="#">
+                Works
+            </a>
+            <div class="relative group animate-text">
+                <button aria-expanded="false" aria-haspopup="true"
+                    class="flex items-center space-x-1 hover:text-[#f97316] transition text-sm font-medium">
+                    <span>
+                        Blog
+                    </span>
+                    <i class="fas fa-chevron-down text-xs"></i>
+                </button>
+            </div>
+            <a class="hover:text-[#f97316] transition animate-text" href="#">
+                Contact
+            </a>
+        </nav>
+        <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu"
+            class="md:hidden animate-text" id="nav-toggle" type="button">
+            <i aria-hidden="true" class="fas fa-bars mr-2"></i>
+            Menu
+        </button>
+    </header>
+    <nav aria-label="Mobile Navigation"
+        class="md:hidden bg-gradient-to-r from-[#fff9f8] to-[#f5f0ef] backdrop-blur-sm px-6 pb-6 space-y-4 text-sm font-medium shadow-md"
+        id="mobile-menu">
+        <a class="block text-[#f97316]" href="#">
+            Home
+        </a>
+        <a class="block hover:text-[#f97316] transition" href="#">
+            Services
+        </a>
+        <a class="block hover:text-[#f97316] transition" href="#">
+            Works
+        </a>
+        <a class="block hover:text-[#f97316] transition" href="#">
+            Blog
+        </a>
+        <a class="block hover:text-[#f97316] transition" href="#">
+            Contact
+        </a>
+    </nav>
+    <main class="max-w-screen-xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+        <!-- Hero Section -->
+        <section class="hero-section animate-text">
+            <div class="hero-text">
+                <p class="hero-intro">Hi, I'm</p>
+                <h1 class="hero-name">Harsh Poonia</h1>
+                <p class="typing">Frontend Developer</p>
+                <p class="hero-desc">
+                    I focus on creating intelligent, user-centric digital solutions that combine data-driven insights
+                    with clean and modern design.
+                </p>
+                <div class="hero-buttons">
+                    <a href="HarshpooniaCV.pdf" download class="btn-primary">Download CV</a>
+                    <button class="btn-outline">Contact</button>
+                </div>
+            </div>
+
+            <div class="hero-image animate-text">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+                <div class="circle circle-3"></div>
+                <div class="circle circle-4"></div>
+                <div class="circle circle-5"></div>
+                <!-- <img src="/images/newmine.png" alt="Smiling man with beard wearing red plaid shirt" class="profile-img"
+                    loading="lazy" /> -->
+            </div>
+        </section>
+
+        <!-- Liquid Glass Stats Section -->
+        <section
+            class="liquid-glass max-w-4xl mx-auto mt-12 py-8 px-8 flex flex-col sm:flex-row justify-between items-center space-y-6 sm:space-y-0 sm:space-x-8 animate-text">
+            <div class="flex items-center space-x-4">
+                <div
+                    class="icon-glass p-3 rounded-full flex items-center justify-center text-white text-lg bg-[#f97316]">
+                    <i class="fas fa-cog">
+                    </i>
+                </div>
+                <div>
+                    <p class="font-bold text-sm text-[#0f1a3c]">
+                        8 years job
+                    </p>
+                    <p class="text-xs text-[#f97316] font-semibold">
+                        Experience
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div
+                    class="icon-glass p-3 rounded-full flex items-center justify-center text-white text-lg bg-[#f97316]">
+                    <i class="fas fa-clipboard-list">
+                    </i>
+                </div>
+                <div>
+                    <p class="font-bold text-sm text-[#0f1a3c]">
+                        500+ Projects
+                    </p>
+                    <p class="text-xs text-[#f97316] font-semibold">
+                        Completed
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div
+                    class="icon-glass p-3 rounded-full flex items-center justify-center text-white text-lg bg-[#f97316]">
+                    <i class="fas fa-headphones-alt">
+                    </i>
+                </div>
+                <div>
+                    <p class="font-bold text-sm text-[#0f1a3c]">
+                        Online 24/7
+                    </p>
+                    <p class="text-xs text-[#f97316] font-semibold">
+                        Support
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section class="services-section animate-text">
+            <div class="services-header">
+                <div class="services-title">
+                    <p class="section-label">Services</p>
+                    <h2 class="section-heading">
+                        I Provide Wide Range Of Digital Services
+                    </h2>
+                </div>
+                <div class="services-nav">
+                    <button aria-label="Previous" class="nav-btn prev">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button aria-label="Next" class="nav-btn next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon bg-purple">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="service-title">UI/UX Design</h3>
+                    <p class="service-text">
+                        Designing intuitive, user-focused interfaces for seamless digital experiences.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon bg-yellow">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <h3 class="service-title">Web Design</h3>
+                    <p class="service-text">
+                        Engineering secure, scalable, and feature-rich full-stack web applications.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon bg-pink">
+                        <i class="fa fa-robot"></i>
+                    </div>
+                    <h3 class="service-title">Generative AI</h3>
+                    <p class="service-text">
+                        Creating AI-powered tools for text, image, and audio generation.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon bg-cyan">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="service-title">App Development</h3>
+                    <p class="service-text">
+                        Building scalable and user-friendly mobile and web applications.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Decorative circles under services -->
+        <!-- <div class="pointer-events-none absolute left-0 right-0 bottom-[-60px] flex justify-center z-0">
+            <div class="w-32 h-32 bg-[#f97316] opacity-20 rounded-full blur-2xl absolute left-1/4"></div>
+            <div class="w-24 h-24 bg-[#a78bfa] opacity-20 rounded-full blur-xl absolute left-1/2"></div>
+            <div class="w-20 h-20 bg-[#fcd34d] opacity-20 rounded-full blur-lg absolute right-1/4"></div>
+        </div> -->
+
+        <!-- BIG Decorative circles in the background, fixed and scrollable over -->
+        <!-- <div class="fixed inset-0 -z-10 pointer-events-none">
+            <div class="w-[600px] h-[600px] bg-[#f97316] opacity-60 rounded-full absolute left-[-200px] top-[60%]">
+            </div>
+            <div class="w-[400px] h-[400px] bg-[#a78bfa] opacity-50 rounded-full  absolute left-[50%] top-[80%]"></div>
+            <div class="w-[350px] h-[350px] bg-[#fcd34d] opacity-30 rounded-full  absolute right-[-120px] top-[70%]">
+            </div>
+        </div> -->
+        <div class="fixed inset-0 -z-10 pointer-events-none">
+            <div class="w-[600px] h-[600px] bg-[#f97316] opacity-60 rounded-full absolute left-[-200px] top-[60%]">
+            </div>
+            <div class="w-[300px] h-[300px] bg-[#fcd34d] opacity-100 rounded-full  absolute right-[-120px] top-[41%]">
+            </div>
+            <!-- <div><img src="/images/minepic.png" alt="Decorative Circle"
+                    class="w-[500px] h-[630px] object-cover rounded-[90px] opacity-100 absolute right-[0px] top-[15%]"></div> -->
+            <div class="w-[1950px] h-[1850px] bg-[#a78bfa] opacity-99 rounded-full  absolute left-[-12%] top-[70%]">
+            </div>
+        </div>
+        </section>
+
+
+        <!-- Experience Section -->
+        <section class="experience-section" id="experience-section">
+            <p class="section-label text-center">Why Choose Me</p>
+            <h2 class="section-title text-center">My Experience Area</h2>
+
+            <div class="experience-grid">
+                <div class="experience-item" data-label="Facebook Marketing" data-percent="95">
+                    <div class="circle-progress">
+                        <svg>
+                            <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="circle-text">0%</div>
+                    </div>
+                    <div class="experience-label">Facebook Marketing</div>
+                </div>
+
+                <div class="experience-item" data-label="Search Engine Optimization" data-percent="90">
+                    <div class="circle-progress">
+                        <svg>
+                            <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="circle-text">0%</div>
+                    </div>
+                    <div class="experience-label">Search Engine Optimization</div>
+                </div>
+
+                <div class="experience-item" data-label="Content Writing" data-percent="95">
+                    <div class="circle-progress">
+                        <svg>
+                            <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="circle-text">0%</div>
+                    </div>
+                    <div class="experience-label">Content Writing</div>
+                </div>
+
+                <div class="experience-item" data-label="Youtube Marketing" data-percent="72">
+                    <div class="circle-progress">
+                        <svg>
+                            <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="circle-text">0%</div>
+                    </div>
+                    <div class="experience-label">Youtube Marketing</div>
+                </div>
+
+                <div class="experience-item" data-label="Affiliate Marketing" data-percent="80">
+                    <div class="circle-progress">
+                        <svg>
+                            <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="circle-text">0%</div>
+                    </div>
+                    <div class="experience-label">Affiliate Marketing</div>
+                </div>
+
+                <div class="experience-item" data-label="Graphic Design" data-percent="85">
+                    <div class="circle-progress">
+                        <svg>
+                            <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="circle-text">0%</div>
+                    </div>
+                    <div class="experience-label">Graphic Design</div>
+                </div>
+
+                <div class="experience-item" data-label="Web Ui Design" data-percent="49">
+                    <div class="circle-progress">
+                        <svg>
+                            <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="circle-text">0%</div>
+                    </div>
+                    <div class="experience-label">Web Ui Design</div>
+                </div>
+
+                <div class="experience-item" data-label="Web Design" data-percent="70">
+                    <div class="circle-progress">
+                        <svg>
+                            <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="circle-text">0%</div>
+                    </div>
+                    <div class="experience-label">Web Design</div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Portfolio Section -->
+        <section class="mt-24 max-w-7xl mx-auto px-4 md:px-0 animate-text py-8">
+            <p class="text-[#f97316] font-semibold text-xs text-center mb-1">
+                Portfolio
+            </p>
+            <h2 class="text-[#0f1a3c] font-bold text-xl sm:text-2xl text-center mb-4">
+                My Amazing Works
+            </h2>
+            <div class="flex justify-center space-x-4 text-xs sm:text-sm mb-8">
+                <button class="text-[#f97316] font-semibold">
+                    All
+                </button>
+                <button class="hover:text-[#f97316] transition">
+                    Youtube
+                </button>
+                <button class="hover:text-[#f97316] transition">
+                    Vimeo
+                </button>
+                <button class="hover:text-[#f97316] transition">
+                    Details
+                </button>
+                <button class="hover:text-[#f97316] transition">
+                    Popup
+                </button>
+                <button class="hover:text-[#f97316] transition">
+                    Soundcloud
+                </button>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                <img alt="Wooden house on stilts at sunset with moon in sky"
+                    class="rounded-lg object-cover w-full h-48 sm:h-60" loading="lazy"
+                    src="https://placehold.co/400x300?text=Wooden+house+on+stilts+at+sunset+with+moon+in+sky" />
+                <img alt="Colorful decorative umbrellas hanging over street"
+                    class="rounded-lg object-cover w-full h-48 sm:h-60" loading="lazy"
+                    src="https://placehold.co/400x300?text=Colorful+decorative+umbrellas+hanging+over+street" />
+                <img alt="Tablet with colorful design and pens on white desk"
+                    class="rounded-lg object-cover w-full h-48 sm:h-60" loading="lazy"
+                    src="https://placehold.co/400x300?text=Tablet+with+colorful+design+and+pens+on+white+desk" />
+                <img alt="Curved ceiling with patterned tiles and windows"
+                    class="rounded-lg object-cover w-full h-48 sm:h-60" loading="lazy"
+                    src="https://placehold.co/400x300?text=Curved+ceiling+with+patterned+tiles+and+windows" />
+                <img alt="Colorful amusement park ride against blue sky"
+                    class="rounded-lg object-cover w-full h-48 sm:h-60" loading="lazy"
+                    src="https://placehold.co/400x300?text=Colorful+amusement+park+ride+against+blue+sky" />
+                <img alt="Vintage typewriter with orange candle on wooden table"
+                    class="rounded-lg object-cover w-full h-48 sm:h-60" loading="lazy"
+                    src="https://placehold.co/400x300?text=Vintage+typewriter+with+orange+candle+on+wooden+table" />
+            </div>
+        </section>
+        <!-- Process Section -->
+        <!-- <section class="flex justify-center items-center py-0 px-0 min-h-screen">
+            <div class="relative w-md w-full"> -->
+        <!-- Vertical dotted line with S shape -->
+        <!-- <div class="absolute top-6 left-1/2 -translate-x-1/2 h-[1050px] w-6 flex flex-col justify-between">
+                    <span class="w-3 h-3 rounded-full bg-gray-500 relative" style="left: 125px; top:125px;"></span>
+                    <span class="w-2 h-2 rounded-full bg-gray-400 relative" style="left: 150px; top: 120px;"></span>
+                    <span class="w-2 h-2 rounded-full bg-gray-400 relative" style="left: 0;"></span>
+                    <span class="w-2 h-2 rounded-full bg-gray-400 relative" style="left: 8px;"></span>
+                    <span class="w-2 h-2 rounded-full bg-gray-400 relative" style="left: 0;"></span>
+                    <span class="w-2 h-2 rounded-full bg-gray-400 relative" style="left: 8px;"></span>
+                    <span class="w-2 h-2 rounded-full bg-gray-400 relative" style="left: 0;"></span>
+                    <span class="w-2 h-2 rounded-full bg-gray-400 relative" style="left: 8px;"></span>
+                    <span class="w-2 h-2 rounded-full bg-gray-400 relative" style="left: 0;"></span>
+                    <span class="w-2 h-2 rounded-full bg-gray-400 relative" style="left: 8px;"></span>
+                    <span class="w-2 h-2 rounded-full bg-gray-400 relative" style="left: 0;"></span>
+                    <span class="w-2 h-2 rounded-full bg-gray-400 relative" style="left: 8px;"></span>
+                    <span class="w-3 h-3 rounded-full bg-gray-500 relative" style="left: 0;"></span>
+                </div> -->
+        <div class="contact-form">
+            <h4 class="sectionHeader">contact us</h4>
+            <h1 class="heading">My Educational Journey</h1>
+            <p class="para">“Tracing my academic path, from school to engineering.”</p>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="flex flex-col sm:flex-row items-center mb-16">
+            <!-- Card -->
+            <div class="bg-[#00a3a3]/50 rounded-[40px] w-full sm:max-w-[700px] py-6 px-6 sm:pl-8 sm:pr-90 relative text-white font-sans shadow-lg pop-up border border-black/15"
+                id="content-step-1">
+                <!-- Content -->
+                <h3 class="font-bold text-[28px] sm:text-[40px] mb-2">Chandigarh University</h3>
+                <p class="text-[16px] sm:text-[20px] mb-2 leading-6">
+                    B.E. CSE(Hons) with Specialisation in Artificial Intelligence & Machine Learning in association with
+                    IBM.
+                </p>
+                <!-- Icon -->
+                <div class="absolute right-[-9px] top-[127px] sm:right-[-20px] sm:top-[127px] m:bottom-auto bg-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center circle-shadow pop-up delay-300"
+                    id="icon-step-1">
+                    <i class="fas fa-user-graduate text-gray-500 text-lg sm:text-xl"></i>
+                </div>
+            </div>
+            <!-- Timeline circle + year -->
+            <div class="ml-0 sm:ml-10 flex flex-col items-center mt-4 sm:mt-36">
+                <div class="w-6 h-6 rounded-full border-2 border-[#00a3a3] flex items-center justify-center">
+                    <div class="w-3 h-3 rounded-full bg-[#00a3a3]"></div>
+                </div>
+                <span class="text-[#00a3a3] font-sans font-bold text-2xl sm:text-4xl leading-none mt-2 sm:mt-0">
+                    2022-26
+                </span>
+            </div>
+        </div>
+
+
+        <!-- Step 2 -->
+        <div class="flex flex-col sm:flex-row items-center mb-16 justify-end">
+            <!-- Timeline circle + year -->
+            <div class="mr-0 sm:mr-10 flex flex-col items-center mt-4 sm:mt-36 order-2 sm:order-1">
+                <div class="w-6 h-6 rounded-full border-2 border-[#008080] flex items-center justify-center">
+                    <div class="w-3 h-3 rounded-full bg-[#008080]"></div>
+                </div>
+                <span class="text-[#008080] font-sans font-bold text-2xl sm:text-4xl leading-none mt-2 sm:mt-0">
+                    2020-22
+                </span>
+            </div>
+
+            <!-- Card -->
+            <div
+                class="bg-[#008080]/50 rounded-[40px] w-full sm:max-w-[700px] py-6 px-10 pl-18 pr-1 sm:pl-20 sm:pr-8 relative text-white font-sans shadow-lg pop-up border border-black/15 order-1 sm:order-2">
+
+                <!-- Icon -->
+                <div class="absolute left-[-9px] bottom-[-20px] sm:top-[145px] sm:-left-8 sm:bottom-auto bg-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center circle-shadow pop-up delay-300"
+                    id="icon-step-2">
+                    <i class="fas fa-school text-gray-500 text-lg sm:text-xl"></i>
+                </div>
+
+                <!-- Content -->
+                <h3 class="font-bold text-[28px] sm:text-[40px] mb-2">Adarsh Vidya Niketan Sen. Sec. School,Pilani</h3>
+                <p class="text-[16px] sm:text-[20px] mb-2 leading-6">
+                    Intermediate completed with distinction, focus on Science stream.
+                </p>
+            </div>
+        </div>
+
+<!-- Step 3 -->
+        <div class="flex flex-col sm:flex-row items-center mb-16">
+            <!-- Card -->
+            <div class="bg-[#00a3a3]/50 rounded-[40px] w-full sm:max-w-[700px] py-6 px-6 sm:pl-8 sm:pr-20 relative text-white font-sans shadow-lg pop-up border border-black/15"
+                id="content-step-1">
+                <!-- Content -->
+                <h3 class="font-bold text-[28px] sm:text-[40px] mb-2 leading-0">Adarsh Vidya Niketan Sen. Sec. School,Pilani</h3>
+                <p class="text-[16px] sm:text-[20px] mb-2 leading-6">
+                    Secondary Education completed with distinction, strong foundation in Mathematics & Science.
+                </p>
+                <!-- Icon -->
+                <div class="absolute -right-2 top-[100px] -translate-y-1/2 bg-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center circle-shadow pop-up delay-300"
+                    id="icon-step-1">
+                    <i class="fas fa-school text-gray-500 text-lg sm:text-xl"></i>
+                </div>
+            </div>
+            <!-- Timeline circle + year -->
+            <div class="ml-0 sm:ml-10 flex flex-col items-center mt-4 sm:mt-36">
+                <div class="w-6 h-6 rounded-full border-2 border-[#00a3a3] flex items-center justify-center">
+                    <div class="w-3 h-3 rounded-full bg-[#00a3a3]"></div>
+                </div>
+                <span class="text-[#00a3a3] font-sans font-bold text-2xl sm:text-4xl leading-none mt-2 sm:mt-0">
+                    20219-20
+                </span>
+            </div>
+        </div>
+
+
+    
+        <!-- Step 2 -->
+        <!-- <div class="flex items-center mb-16 justify-end">
+            <div class="mr-10 flex flex-col items-center mt-36">
+                <div class="w-6 h-6 rounded-full border-2 border-[#008080] flex items-center justify-center">
+                    <div class="w-3 h-3 rounded-full bg-[#008080]"></div>
+                </div>
+                <!-- <span class="mb-2 text-gray-700 font-sans font-semibold text-2xl">STEP</span> -->
+                <!-- <span class="text-[#008080] font-sans font-bold text-4xl leading-none">2020-22</span>
+            </div>
+            <div class="bg-[#008080]/50 rounded-full w-94 py-6 pl-20 pr-8 relative text-white font-sans shadow-lg pop-up border border-black/15"
+                id="content-step-2">
+                <div class="absolute -left-10 top-1/2 -translate-y-1/2 bg-white w-20 h-20 rounded-full flex items-center justify-center circle-shadow pop-up delay-300"
+                    id="icon-step-2">
+                    <i class="fas fa-school text-gray-500 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-[40px] mb-2">Adarsh Vidya Niketan Sen. Sec. School</h3>
+                <p class="text-[18px] mb-2 leading-5">
+                    Intermediate
+
+                </p>
+            </div>
+        </div> -->
+
+        <!-- Step 3 -->
+        <!-- <div class="flex items-center mb-16">
+                    <div class="bg-[#004d4d]/50 rounded-full w-94 py-6 pl-8 pr-20 relative text-white font-sans shadow-lg pop-up border border-black/15"
+                        id="content-step-3">
+                        <h3 class="font-bold text-[40px] mb-2">Adarsh Vidya Niketan Sen. Sec. School</h3>
+                        <p class="text-[18px] mb-2 leading-5">
+                            Secondary Education
+                        </p>
+                        <div class="absolute -right-10 top-1/2 -translate-y-1/2 bg-white w-20 h-20 rounded-full flex items-center justify-center circle-shadow pop-up delay-300"
+                            id="icon-step-3">
+                            <i class="fas fa-school text-gray-500 text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="ml-10 flex flex-col items-center mt-36">
+                        <div class="w-6 h-6 rounded-full border-2 border-[#004d4d] flex items-center justify-center">
+                            <div class="w-3 h-3 rounded-full bg-[#004d4d]"></div>
+                        </div> -->
+        <!-- <span class="mt-2 text-gray-700 font-sans font-semibold text-2xl">STEP</span> -->
+        <!-- <span class="text-[#004d4d] font-sans font-bold text-4xl leading-none">2019-20</span>
+                    </div>
+                </div> -->
+
+        <!-- Step 4 -->
+        <!-- <div class="flex items-center justify-end">
+                    <div class="mr-10 flex flex-col items-center mt-36">
+                        <div class="w-6 h-6 rounded-full border-2 border-[#3a4a63] flex items-center justify-center">
+                            <div class="w-3 h-3 rounded-full bg-[#3a4a63]"></div>
+                        </div>
+                        <span class="mb-2 text-gray-700 font-sans font-semibold text-2xl">STEP</span>
+                        <span class="text-[#3a4a63] font-sans font-bold text-4xl leading-none">04</span>
+                    </div>
+                    <div class="bg-[#3a4a63]/50 rounded-full w-64 py-6 pl-20 pr-8 relative text-white font-sans shadow-lg pop-up border border-black/15"
+                        id="content-step-4">
+                        <div class="absolute -left-10 top-1/2 -translate-y-1/2 bg-white w-20 h-20 rounded-full flex items-center justify-center circle-shadow pop-up delay-500"
+                            id="icon-step-4">
+                            <i class="fas fa-bullseye text-gray-400 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">LOREM IPSUM</h3>
+                        <p class="text-xs leading-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh e uismod
+                            tincidunt ut laoreet
+                        </p>
+                    </div>
+                </div> -->
+        </div>
+        </section>
+
+        <!-- Contact Section with Glassmorphism Effect -->
+        <div class="contact-form">
+            <h4 class="sectionHeader">contact us</h4>
+            <h1 class="heading">Get In Touch!</h1>
+            <p class="para">“I’m always open to discussing new projects and to design, develop, and deliver.”</p>
+
+            <div class="contactForm glass-card">
+                <form action="#">
+                    <h1 class="sub-heading">Need Support !</h1>
+                    <p class="para para2">Contact us for a quote , help to join the them.</p>
+                    <input type="text" class="input" placeholder="your name">
+                    <input type="text" class="input" placeholder="your email">
+                    <input type="text" class="input" placeholder="your Subject">
+                    <textarea class="input" cols="30" rows="5" placeholder="Your message..."></textarea>
+                    <input type="submit" class="input submit" value="Send Message">
+                </form>
+
+                <div class="map-container">
+                    <div class="mapBg"></div>
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.7394694551963!2d76.57299337586007!3d30.764204834110494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ffbdb99768723%3A0x4b2a98da9b10996!2sNC%201!5e1!3m2!1sen!2sin!4v1757191288664!5m2!1sen!2sin"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contactMethod">
+                <div class="method">
+                    <i class="fa fa-map-marker-alt contactIcon"></i>
+                    <article class="text">
+                        <h1 class="sub-heading">Location</h1>
+                        <p class="para">chandigarh university</p>
+                    </article>
+                </div>
+
+                <div class="method">
+                    <i class="fa fa-envelope contactIcon"></i>
+                    <article class="text">
+                        <h1 class="sub-heading">Email</h1>
+                        <p class="para">Email: harshpoonia024@gmail.com</p>
+                    </article>
+                </div>
+
+                <div class="method">
+                    <i class="fa fa-phone contactIcon"></i>
+                    <article class="text">
+                        <h1 class="sub-heading">Phone</h1>
+                        <p class="para">+91 12345 67890</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
