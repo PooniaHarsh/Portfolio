@@ -7,72 +7,54 @@
         Harsh Poonia Portfolio
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="stylee.css" />
 </head>
 
-<body class="bg-[#fff9f8] text-[#0f1a3c]">
-    <header
-        class="flex justify-between items-center px-6 sm:px-10 md:px-16 lg:px-24 py-6 sticky top-0 bg-gradient-to-r from-[#fff9f8] to-[#f5f0ef] backdrop-blur-sm z-50 shadow-sm">
-        <div class="text-2xl font-extrabold text-[#0f1a3c] flex items-center animate-text">
-            PORTFOLIO
-            <span class="text-[#f97316]">
-                .
-            </span>
+<body>
+    <header class="site-header">
+        <div class="logo animate-text">
+            PORTFOLIO <span class="dot">.</span>
         </div>
-        <nav aria-label="Primary Navigation" class="hidden md:flex space-x-8 text-sm font-medium">
-            <a class="text-[#f97316] animate-text" href="#">
-                Home
-            </a>
-            <a class="hover:text-[#f97316] transition animate-text" href="#">
-                Services
-            </a>
-            <a class="hover:text-[#f97316] transition animate-text" href="#">
-                Works
-            </a>
-            <div class="relative group animate-text">
-                <button aria-expanded="false" aria-haspopup="true"
-                    class="flex items-center space-x-1 hover:text-[#f97316] transition text-sm font-medium">
-                    <span>
-                        Blog
-                    </span>
-                    <i class="fas fa-chevron-down text-xs"></i>
+
+        <!-- Desktop Menu -->
+        <nav aria-label="Primary Navigation" class="desktop-menu">
+            <a class="active animate-text" href="#home">Home</a>
+            <a class="link animate-text" href="#services">Services</a>
+            <a class="link animate-text" href="#projects">Projects</a>
+            <div class="dropdown animate-text">
+                <button aria-expanded="false" aria-haspopup="true" class="dropdown-btn">
+                    <span>Blog</span>
+                    <i class="fas fa-chevron-down"></i>
                 </button>
             </div>
-            <a class="hover:text-[#f97316] transition animate-text" href="#">
-                Contact
-            </a>
+            <a class="link animate-text" href="#experience-section">Experience</a>
         </nav>
-        <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu"
-            class="md:hidden animate-text" id="nav-toggle" type="button">
-            <i aria-hidden="true" class="fas fa-bars mr-2"></i>
+
+        <!-- Mobile Button -->
+        <button class="nav-toggle" id="nav-toggle" type="button">
+            <i class="fas fa-bars icon"></i>
             Menu
         </button>
+
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="mobile-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav aria-label="Mobile Navigation"
-        class="md:hidden bg-gradient-to-r from-[#fff9f8] to-[#f5f0ef] backdrop-blur-sm px-6 pb-6 space-y-4 text-sm font-medium shadow-md"
-        id="mobile-menu">
-        <a class="block text-[#f97316]" href="#">
-            Home
-        </a>
-        <a class="block hover:text-[#f97316] transition" href="#">
-            Services
-        </a>
-        <a class="block hover:text-[#f97316] transition" href="#">
-            Works
-        </a>
-        <a class="block hover:text-[#f97316] transition" href="#">
-            Blog
-        </a>
-        <a class="block hover:text-[#f97316] transition" href="#">
-            Contact
-        </a>
-    </nav>
+
+
     <main class="max-w-screen-xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
         <!-- Hero Section -->
-        <section class="hero-section animate-text">
+        <section id="home" class="hero-section animate-text">
             <div class="hero-text">
                 <p class="hero-intro">Hi, I'm</p>
                 <h1 class="hero-name">Harsh Poonia</h1>
@@ -83,23 +65,23 @@
                 </p>
                 <div class="hero-buttons">
                     <a href="HarshpooniaCV.pdf" download class="btn-primary">Download CV</a>
-                    <button class="btn-outline">Contact</button>
+                    <a class="btn-outline" href="#contact">Contact</a>
                 </div>
             </div>
 
-            <div class="hero-image animate-text">
+            <!-- <div class="hero-image animate-text">
                 <div class="circle circle-1"></div>
                 <div class="circle circle-2"></div>
                 <div class="circle circle-3"></div>
                 <div class="circle circle-4"></div>
-                <div class="circle circle-5"></div>
-                <!-- <img src="/images/newmine.png" alt="Smiling man with beard wearing red plaid shirt" class="profile-img"
+                <div class="circle circle-5"></div> -->
+            <!-- <img src="/images/newmine.png" alt="Smiling man with beard wearing red plaid shirt" class="profile-img"
                     loading="lazy" /> -->
             </div>
         </section>
 
         <!-- Liquid Glass Stats Section -->
-        <section
+        <!-- <section
             class="liquid-glass max-w-4xl mx-auto mt-12 py-8 px-8 flex flex-col sm:flex-row justify-between items-center space-y-6 sm:space-y-0 sm:space-x-8 animate-text">
             <div class="flex items-center space-x-4">
                 <div
@@ -109,10 +91,10 @@
                 </div>
                 <div>
                     <p class="font-bold text-sm text-[#0f1a3c]">
-                        8 years job
+                        8
                     </p>
                     <p class="text-xs text-[#f97316] font-semibold">
-                        Experience
+                        Collaborations
                     </p>
                 </div>
             </div>
@@ -124,7 +106,7 @@
                 </div>
                 <div>
                     <p class="font-bold text-sm text-[#0f1a3c]">
-                        500+ Projects
+                        20+ Projects
                     </p>
                     <p class="text-xs text-[#f97316] font-semibold">
                         Completed
@@ -146,10 +128,153 @@
                     </p>
                 </div>
             </div>
+        </section> -->
+
+
+        <section class="stats-section">
+            <!-- <div class="stat-item">
+             <div class="icon">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+             </div>
+            <div>
+             <p class="stat-value">LinkedIn</p>
+             <p class="stat-label">Harsh Poonia </p>
+         </div>
+    </div> -->
+
+            <a href="https://www.linkedin.com/in/harsh-poonia-886b34249/" target="_blank" class="stat-item">
+                <div class="icons">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <p class="stat-value">LinkedIn</p>
+                    <p class="stat-label">Harsh Poonia</p>
+                </div>
+            </a>
+
+
+
+            <a href="https://github.com/PooniaHarsh" target="_blank" class="stat-item">
+                <div class="icons">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <p class="stat-value">Github</p>
+                    <p class="stat-label">PooniaHarsh</p>
+                </div>
+            </a>
+
+
+            <a href="https://www.figma.com" target="_blank" class="stat-item">
+                <div class="icons">
+                    <i class="fab fa-figma" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <p class="stat-value">Figma</p>
+                    <p class="stat-label">Harsh Poonia</p>
+                </div>
+            </a>
+
         </section>
+
+
+        <!-- Image Gallery Section -->
+        <section id="projects" id="gallery" style="background:#f9fdfb00">
+            <div class="container">
+                <p class="text-[#f97316] font-semibold text-[50px] text-center mb-1">
+                    Projects
+                </p>
+                <h2 class="text-[#0f1a3c] font-bold text-xl sm:text-2xl text-center mb-4">
+                    My Amazing Works
+                </h2>
+
+                <!-- Personal AI Assistant (JARVIS) -->
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/Jarvis.png" alt="KGVS Field Work - Community Development" class="gallery-img"
+                            loading="lazy" />
+                        <div class="gallery-overlay">
+                            <h4>Personal AI Assistant(JARVIS)</h4>
+                            <p>Modern JARVIS is a personal AI assistant featuring voice commands, automation, WhatsApp
+                                integration, and interactive GUI.</p>
+                        </div>
+                    </div>
+
+                    <!-- KGVS Webpage -->
+                    <div class="gallery-item">
+                        <img src="images/KGVS.png" alt="KGVS Training Session - Skill Development" class="gallery-img"
+                            loading="lazy" />
+                        <div class="gallery-overlay">
+                            <a href="https://kgvs.vercel.app/" target="_blank" class="overlay-link">
+                                <h4>KGVS Webpage</h4>
+                                <p>KGVS advances sustainable farming, women empowerment, youth employment, skill
+                                    development, organic agriculture, and SHG promotion.</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/school.png" alt="KGVS Rural Development - Village Work" class="gallery-img"
+                            loading="lazy" />
+                        <div class="gallery-overlay">
+                            <a href="https://pooniaharsh.github.io/Adarsh/" target="_blank" class="overlay-link">
+                                <h4>School Webpage</h4>
+                                <p>
+                                    Developed a fully responsive and interactive school website with clean
+                                    UI,announcements,and academic sections.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Carbonfootprint Webpage -->
+                    <div class="gallery-item">
+                        <img src="images/carbon.png" alt="KGVS Women Empowerment - SHG Activities" class="gallery-img"
+                            loading="lazy" />
+                        <div class="gallery-overlay">
+                            <a href="https://www.figma.com/proto/Wv6VQc9LZBSluhZvt3FhPy/Sustainmine-figma?page-id=0%3A1&team_id=1427010162002882662&node-id=24-44&starting-point-node-id=106%3A126&scaling=scale-down-width&content-scaling=fixed&t=WEWHcERjrDNyLsGD-1"
+                                target="_blank" class="overlay-link">
+                                <h4>Carbonfootprint Webpage</h4>
+                                <p>A web app that helps users calculate and neutralize their carbon footprint through
+                                    smart
+                                    insights and data visualization.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Generative AI Tool -->
+                    <div class="gallery-item">
+                        <img src="images/genai_image.png" alt="KGVS Sustainable Farming - Agricultural Training"
+                            class="gallery-img" loading="lazy" />
+                        <div class="gallery-overlay">
+                            <h4>Generative AI</h4>
+                            <p>Developed a tool that converts text to speech and speech to text with a custom GUI,
+                                adjustable settings, and easy download functionality.</p>
+                        </div>
+                    </div>
+
+                    <!-- Music Recommendation System -->
+                    <div class="gallery-item">
+                        <img src="images/music.png" alt="KGVS Youth Development - Skill Training" class="gallery-img"
+                            loading="lazy" />
+                        <div class="gallery-overlay">
+                            <h4>Music Recommendation System</h4>
+                            <p>Developed a music recommendation system using collaborative filtering and natural
+                                language processing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div style="text-align:center;margin-top:92px">
+        <p style="color:var(--muted);font-size:14px">📸 All photos showcase real field work and community impact</p>
+      </div> -->
+            </div>
+        </section>
+
+
         <!-- Services Section -->
         <section class="services-section animate-text">
-            <div class="services-header">
+            <div id="services" class="services-header">
                 <div class="services-title">
                     <p class="section-label">Services</p>
                     <h2 class="section-heading">
@@ -229,8 +354,8 @@
             </div>
             <div class="w-[300px] h-[300px] bg-[#fcd34d] opacity-100 rounded-full  absolute right-[-120px] top-[41%]">
             </div>
-            <div><img src="/images/minepic.png" alt="Decorative Circle"
-                    class="w-[500px] h-[630px] object-cover rounded-[90px] opacity-100 absolute right-[0px] top-[15%]"></div>
+            <!-- <div><img src="/images/minepic.png" alt="Decorative Circle"
+                    class="w-[500px] h-[630px] object-cover rounded-[90px] opacity-100 absolute right-[0px] top-[15%]"></div> -->
             <div class="w-[1950px] h-[1850px] bg-[#a78bfa] opacity-99 rounded-full  absolute left-[-12%] top-[70%]">
             </div>
         </div>
@@ -242,7 +367,7 @@
             <h2 class="section-title text-center">My Experience Area</h2>
 
             <div class="experience-grid">
-                <div class="experience-item" data-label="Facebook Marketing" data-percent="95">
+                <div class="experience-item" data-label="Facebook Marketing" data-percent="100">
                     <div class="circle-progress">
                         <svg>
                             <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
@@ -250,10 +375,10 @@
                         </svg>
                         <div class="circle-text">0%</div>
                     </div>
-                    <div class="experience-label">Facebook Marketing</div>
+                    <div class="experience-label">Figma</div>
                 </div>
 
-                <div class="experience-item" data-label="Search Engine Optimization" data-percent="90">
+                <div class="experience-item" data-label="Search Engine Optimization" data-percent="95">
                     <div class="circle-progress">
                         <svg>
                             <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
@@ -261,7 +386,7 @@
                         </svg>
                         <div class="circle-text">0%</div>
                     </div>
-                    <div class="experience-label">Search Engine Optimization</div>
+                    <div class="experience-label">HTML/CSS</div>
                 </div>
 
                 <div class="experience-item" data-label="Content Writing" data-percent="95">
@@ -272,10 +397,10 @@
                         </svg>
                         <div class="circle-text">0%</div>
                     </div>
-                    <div class="experience-label">Content Writing</div>
+                    <div class="experience-label">Adobe Lightroom</div>
                 </div>
 
-                <div class="experience-item" data-label="Youtube Marketing" data-percent="72">
+                <div class="experience-item" data-label="Youtube Marketing" data-percent="80">
                     <div class="circle-progress">
                         <svg>
                             <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
@@ -283,7 +408,7 @@
                         </svg>
                         <div class="circle-text">0%</div>
                     </div>
-                    <div class="experience-label">Youtube Marketing</div>
+                    <div class="experience-label">Adobe Photoshop</div>
                 </div>
 
                 <div class="experience-item" data-label="Affiliate Marketing" data-percent="80">
@@ -294,7 +419,7 @@
                         </svg>
                         <div class="circle-text">0%</div>
                     </div>
-                    <div class="experience-label">Affiliate Marketing</div>
+                    <div class="experience-label">Generative AI</div>
                 </div>
 
                 <div class="experience-item" data-label="Graphic Design" data-percent="85">
@@ -308,7 +433,7 @@
                     <div class="experience-label">Graphic Design</div>
                 </div>
 
-                <div class="experience-item" data-label="Web Ui Design" data-percent="49">
+                <div class="experience-item" data-label="Web Ui Design" data-percent="90">
                     <div class="circle-progress">
                         <svg>
                             <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
@@ -333,16 +458,16 @@
         </section>
 
 
-        <!-- Portfolio Section -->
-        <section class="mt-24 max-w-7xl mx-auto px-4 md:px-0 animate-text py-8">
-            <p class="text-[#f97316] font-semibold text-xs text-center mb-1">
-                Portfolio
+        <!-- Projects Section -->
+        <!--<section id="works" class="mt-24 max-w-7xl mx-auto px-4 md:px-0 animate-text py-8">
+            <p class="text-[#f97316] font-semibold text-[50px] text-center mb-1">
+                Projects
             </p>
             <h2 class="text-[#0f1a3c] font-bold text-xl sm:text-2xl text-center mb-4">
                 My Amazing Works
             </h2>
             <div class="flex justify-center space-x-4 text-xs sm:text-sm mb-8">
-                <button class="text-[#f97316] font-semibold">
+                 <button class="text-[#f97316] font-semibold">
                     All
                 </button>
                 <button class="hover:text-[#f97316] transition">
@@ -360,28 +485,35 @@
                 <button class="hover:text-[#f97316] transition">
                     Soundcloud
                 </button>
-            </div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+            </div> 
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 ">
                 <img alt="Wooden house on stilts at sunset with moon in sky"
                     class="rounded-lg object-cover w-full h-48 sm:h-60" loading="lazy"
-                    src="https://placehold.co/400x300?text=Wooden+house+on+stilts+at+sunset+with+moon+in+sky" />
+                    src="/images/Jarvis.png" />
                 <img alt="Colorful decorative umbrellas hanging over street"
                     class="rounded-lg object-cover w-full h-48 sm:h-60" loading="lazy"
-                    src="https://placehold.co/400x300?text=Colorful+decorative+umbrellas+hanging+over+street" />
+                    src="/images/KGVS.png" />
                 <img alt="Tablet with colorful design and pens on white desk"
                     class="rounded-lg object-cover w-full h-48 sm:h-60" loading="lazy"
-                    src="https://placehold.co/400x300?text=Tablet+with+colorful+design+and+pens+on+white+desk" />
+                    src="/images/school.png" />
                 <img alt="Curved ceiling with patterned tiles and windows"
                     class="rounded-lg object-cover w-full h-48 sm:h-60" loading="lazy"
-                    src="https://placehold.co/400x300?text=Curved+ceiling+with+patterned+tiles+and+windows" />
-                <img alt="Colorful amusement park ride against blue sky"
+                    src="/images/carbonfootprint.png" />
+                 <img alt="Colorful amusement park ride against blue sky"
                     class="rounded-lg object-cover w-full h-48 sm:h-60" loading="lazy"
                     src="https://placehold.co/400x300?text=Colorful+amusement+park+ride+against+blue+sky" />
                 <img alt="Vintage typewriter with orange candle on wooden table"
                     class="rounded-lg object-cover w-full h-48 sm:h-60" loading="lazy"
-                    src="https://placehold.co/400x300?text=Vintage+typewriter+with+orange+candle+on+wooden+table" />
+                    src="https://placehold.co/400x300?text=Vintage+typewriter+with+orange+candle+on+wooden+table" /> 
             </div>
-        </section>
+        </section>-->
+
+
+
+
+
+
+
         <!-- Process Section -->
         <!-- <section class="flex justify-center items-center py-0 px-0 min-h-screen">
             <div class="relative w-md w-full"> -->
@@ -402,7 +534,7 @@
                     <span class="w-3 h-3 rounded-full bg-gray-500 relative" style="left: 0;"></span>
                 </div> -->
         <div class="contact-form">
-            <h4 class="sectionHeader">contact us</h4>
+            <!-- <h4 class="sectionHeader">contact us</h4> -->
             <h1 class="heading">My Educational Journey</h1>
             <p class="para">“Tracing my academic path, from school to engineering.”</p>
         </div>
@@ -419,7 +551,7 @@
                     IBM.
                 </p>
                 <!-- Icon -->
-                <div class="absolute right-[-9px] top-[127px] sm:right-[-20px] sm:top-[127px] m:bottom-auto bg-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center circle-shadow pop-up delay-300"
+                <div class="absolute right-[-9px] top-[127px] sm:right-[-20px] sm:top-[110px] m:bottom-auto bg-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center circle-shadow pop-up delay-300"
                     id="icon-step-1">
                     <i class="fas fa-user-graduate text-gray-500 text-lg sm:text-xl"></i>
                 </div>
@@ -447,17 +579,14 @@
                     2020-22
                 </span>
             </div>
-
             <!-- Card -->
             <div
                 class="bg-[#008080]/50 rounded-[40px] w-full sm:max-w-[700px] py-6 px-10 pl-18 pr-1 sm:pl-20 sm:pr-8 relative text-white font-sans shadow-lg pop-up border border-black/15 order-1 sm:order-2">
-
                 <!-- Icon -->
                 <div class="absolute left-[-9px] bottom-[-20px] sm:top-[145px] sm:-left-8 sm:bottom-auto bg-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center circle-shadow pop-up delay-300"
                     id="icon-step-2">
                     <i class="fas fa-school text-gray-500 text-lg sm:text-xl"></i>
                 </div>
-
                 <!-- Content -->
                 <h3 class="font-bold text-[28px] sm:text-[40px] mb-2">Adarsh Vidya Niketan Sen. Sec. School,Pilani</h3>
                 <p class="text-[16px] sm:text-[20px] mb-2 leading-6">
@@ -466,18 +595,19 @@
             </div>
         </div>
 
-<!-- Step 3 -->
-        <div class="flex flex-col sm:flex-row items-center mb-16">
+        <!-- Step 3 -->
+        <div class="flex flex-col sm:flex-row items-center mb-16 ">
             <!-- Card -->
             <div class="bg-[#00a3a3]/50 rounded-[40px] w-full sm:max-w-[700px] py-6 px-6 sm:pl-8 sm:pr-20 relative text-white font-sans shadow-lg pop-up border border-black/15"
                 id="content-step-1">
                 <!-- Content -->
-                <h3 class="font-bold text-[28px] sm:text-[40px] mb-2 leading-0">Adarsh Vidya Niketan Sen. Sec. School,Pilani</h3>
+                <h3 class="font-bold text-[28px] sm:text-[40px] mb-2 leading-0">Adarsh Vidya Niketan Sen. Sec.
+                    School,Pilani</h3>
                 <p class="text-[16px] sm:text-[20px] mb-2 leading-6">
                     Secondary Education completed with distinction, strong foundation in Mathematics & Science.
                 </p>
                 <!-- Icon -->
-                <div class="absolute -right-2 top-[100px] -translate-y-1/2 bg-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center circle-shadow pop-up delay-300"
+                <div class="absolute right-[-9px] top-[147px] sm:right-[-20px] sm:top-[167px] m:bottom-auto bg-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center circle-shadow pop-up delay-300"
                     id="icon-step-1">
                     <i class="fas fa-school text-gray-500 text-lg sm:text-xl"></i>
                 </div>
@@ -494,15 +624,15 @@
         </div>
 
 
-    
+
         <!-- Step 2 -->
         <!-- <div class="flex items-center mb-16 justify-end">
             <div class="mr-10 flex flex-col items-center mt-36">
                 <div class="w-6 h-6 rounded-full border-2 border-[#008080] flex items-center justify-center">
                     <div class="w-3 h-3 rounded-full bg-[#008080]"></div>
-                </div>
-                <!-- <span class="mb-2 text-gray-700 font-sans font-semibold text-2xl">STEP</span> -->
-                <!-- <span class="text-[#008080] font-sans font-bold text-4xl leading-none">2020-22</span>
+                </div>-->
+        <!-- <span class="mb-2 text-gray-700 font-sans font-semibold text-2xl">STEP</span> -->
+        <!-- <span class="text-[#008080] font-sans font-bold text-4xl leading-none">2020-22</span>
             </div>
             <div class="bg-[#008080]/50 rounded-full w-94 py-6 pl-20 pr-8 relative text-white font-sans shadow-lg pop-up border border-black/15"
                 id="content-step-2">
@@ -565,22 +695,26 @@
         </div>
         </section>
 
-        <!-- Contact Section with Glassmorphism Effect -->
-        <div class="contact-form">
+        <!-- Contact Section  -->
+        <div id="contact" class="contact-form">
             <h4 class="sectionHeader">contact us</h4>
             <h1 class="heading">Get In Touch!</h1>
             <p class="para">“I’m always open to discussing new projects and to design, develop, and deliver.”</p>
 
             <div class="contactForm glass-card">
-                <form action="#">
+                <form action="https://formsubmit.co/harshpoonia024@gmail.com" method="POST">
                     <h1 class="sub-heading">Need Support !</h1>
                     <p class="para para2">Contact us for a quote , help to join the them.</p>
-                    <input type="text" class="input" placeholder="your name">
-                    <input type="text" class="input" placeholder="your email">
-                    <input type="text" class="input" placeholder="your Subject">
-                    <textarea class="input" cols="30" rows="5" placeholder="Your message..."></textarea>
+
+                    <input type="text" class="input" name="name" placeholder="Your Name" required>
+                    <input type="email" class="input" name="email" placeholder="Your Email" required>
+                    <input type="text" class="input" name="subject" placeholder="Your Subject">
+                    <textarea class="input" name="message" cols="30" rows="5" placeholder="Your Message..."
+                        required></textarea>
+
                     <input type="submit" class="input submit" value="Send Message">
                 </form>
+
 
                 <div class="map-container">
                     <div class="mapBg"></div>
@@ -621,7 +755,38 @@
         </div>
 
     </main>
+
+    <footer>
+        <section class="footer-cta">
+            <div class="container foot">
+                <div>
+                    <h3 style="margin-top:0">About Me<span class="dot">.</span></h3>
+                    <p>Hi, I'm Harsh Poonia, a passionate web developer with a knack for creating stunning and
+                        functional websites. I love turning ideas into reality and am always eager to learn new
+                        technologies.</p>
+                </div>
+                <div>
+                    <h3 style="margin-top:0">Quick Links</h3>
+                    <p><a href="#projects">Projects</a></p>
+                    <p><a href="#services">Services</a></p>
+                    <p><a href="#experience-section">Experience</a></p>
+                </div>
+                <div>
+                    <h3 style="margin-top:0">Partners</h3>
+                    <p>Me only</p>
+                </div>
+            </div>
+            <div class="copyright">© <span id="year"></span> All rights reserved. Designed by Harsh Poonia</div>
+        </section>
+    </footer>
+
+
+    <!-- Floating Home Button -->
+    <button id="homeBtn">⇪</button>
+
+
     <script src="script.js"></script>
+
 </body>
 
 </html>

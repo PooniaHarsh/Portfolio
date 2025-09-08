@@ -1,23 +1,45 @@
 
+    const navToggle = document.getElementById("nav-toggle");
+    const navIcon = navToggle.querySelector("i");
+    const mobileMenu = document.getElementById("mobile-menu");
 
-// Mobile menu toggle
-const navToggle = document.getElementById("nav-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
+    navToggle.addEventListener("click", () => {
+        const expanded = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", !expanded);
 
-navToggle.addEventListener("click", () => {
-  const expanded =
-    navToggle.getAttribute("aria-expanded") === "true" ? "false" : "true";
-  navToggle.setAttribute("aria-expanded", expanded);
-  mobileMenu.classList.toggle("active");
-});
+        if (expanded) {
+            mobileMenu.classList.remove("active");
+            navIcon.classList.remove("fa-times");
+            navIcon.classList.add("fa-bars");
+        } else {
+            mobileMenu.classList.add("active");
+            navIcon.classList.remove("fa-bars");
+            navIcon.classList.add("fa-times");
+        }
+    });
 
-// Typing text effect
-const typingText = document.querySelector(".typing-text");
-const words = ["Harsh", "a Developer", "a Designer"];
-let wordIndex = 0;
-let charIndex = 0;
-let currentWord = "";
-let isDeleting = false;
+
+
+
+
+// // Mobile menu toggle
+// const navToggle = document.getElementById("nav-toggle");
+// const mobileMenu = document.getElementById("mobile-menu");
+
+// navToggle.addEventListener("click", () => {
+//   const expanded =
+//     navToggle.getAttribute("aria-expanded") === "true" ? "false" : "true";
+//   navToggle.setAttribute("aria-expanded", expanded);
+//   mobileMenu.classList.toggle("active");
+// });
+
+// // Typing text effect
+// const typingText = document.querySelector(".typing-text");
+// const words = ["Harsh", "a Developer", "a Designer"];
+// let wordIndex = 0;
+// let charIndex = 0;
+// let currentWord = "";
+// let isDeleting = false;
 
 function typeEffect() {
   currentWord = words[wordIndex];
@@ -134,3 +156,117 @@ function animateTextsOnScroll() {
 
 window.addEventListener("scroll", animateTextsOnScroll);
 window.addEventListener("load", animateTextsOnScroll);
+
+
+// Initialize all features
+function initAllFeatures() {
+    initModernNavigation();
+    initSmoothScrolling();
+    initScrollAnimations();
+    initResponsiveImages();
+    initTouchGestures();
+    initPerformanceOptimizations();
+    initAccessibility();
+    initImageGallery(); // Initialize image gallery
+    initContactForm(); // Initialize contact form
+}
+
+
+// floating home button
+  const homeBtn = document.getElementById("homeBtn");
+
+  // Show button after scrolling 100px
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      homeBtn.style.display = "block";
+    } else {
+      homeBtn.style.display = "none";
+    }
+  });
+
+  // Scroll to top smoothly
+  homeBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+
+  // Update footer year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+
+
+
+//  if (mobileToggle && mobileOverlay && mobileNav) {
+//         mobileToggle.addEventListener('click', (e) => {
+//             e.preventDefault();
+//             e.stopPropagation();
+            
+//             const isActive = mobileToggle.classList.contains('active');
+            
+//             if (isActive) {
+//                 // Close menu
+//                 mobileToggle.classList.remove('active');
+//                 mobileOverlay.classList.remove('active');
+//                 document.body.style.overflow = '';
+//                 document.body.style.position = '';
+//             } else {
+//                 // Open menu
+//                 mobileToggle.classList.add('active');
+//                 mobileOverlay.classList.add('active');
+//                 document.body.style.overflow = 'hidden';
+//                 document.body.style.position = 'fixed';
+//                 document.body.style.width = '100%';
+//             }
+//         });
+        
+//         // Close mobile menu when clicking overlay
+//         mobileOverlay.addEventListener('click', (e) => {
+//             if (e.target === mobileOverlay) {
+//                 closeMobileMenu();
+//             }
+//         });
+        
+//         // Close mobile menu when clicking on links
+//         const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+//         mobileLinks.forEach(link => {
+//             link.addEventListener('click', () => {
+//                 closeMobileMenu();
+//             });
+//         });
+        
+//         // Close mobile menu on escape key
+//         document.addEventListener('keydown', (e) => {
+//             if (e.key === 'Escape' && mobileOverlay.classList.contains('active')) {
+//                 closeMobileMenu();
+//             }
+//         });
+        
+//         // Close mobile menu on window resize
+//         window.addEventListener('resize', () => {
+//             if (window.innerWidth > 991 && mobileOverlay.classList.contains('active')) {
+//                 closeMobileMenu();
+//             }
+//         });
+        
+//         // Function to close mobile menu
+//         function closeMobileMenu() {
+//             mobileToggle.classList.remove('active');
+//             mobileOverlay.classList.remove('active');
+//             document.body.style.overflow = '';
+//             document.body.style.position = '';
+//             document.body.style.width = '';
+//         }
+        
+//         // Prevent body scroll when mobile menu is open
+//         mobileOverlay.addEventListener('touchmove', (e) => {
+//             if (mobileOverlay.classList.contains('active')) {
+//                 e.preventDefault();
+//             }
+//         }, { passive: false });
+//     }
+    
+//     // Add scroll event listener
+//     window.addEventListener('scroll', handleScroll);
+    
+//     // Initialize scroll state
+//     handleScroll();
