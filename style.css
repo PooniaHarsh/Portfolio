@@ -1500,15 +1500,18 @@ footer {
     border-top-right-radius: 66px; */
 }
 
+
 .dot {
     color: #f97316;
 }
 
 .foot {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1.2fr 1fr  ;
+    gap: 190px;
     padding: 36px 0;
+    padding-left: 60px;
+    padding-right: 50px;
 }
 
 .foot h3 {
