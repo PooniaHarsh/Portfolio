@@ -18,14 +18,13 @@
         }
     });
 
+// Dropdown functionality
+const dropdown = document.getElementById("myDropdown");
+    const header = dropdown.querySelector(".dropdown-header");
 
-
-
-
-// // Mobile menu toggle
-// const navToggle = document.getElementById("nav-toggle");
-// const mobileMenu = document.getElementById("mobile-menu");
-
+    header.addEventListener("click", () => {
+      dropdown.classList.toggle("active");
+    });
 // navToggle.addEventListener("click", () => {
 //   const expanded =
 //     navToggle.getAttribute("aria-expanded") === "true" ? "false" : "true";

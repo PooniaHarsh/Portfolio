@@ -16,7 +16,7 @@
 <body>
     <header class="site-header">
         <div class="logo animate-text">
-            PORTFOLIO <span class="dot">.</span>
+            HP<span class="dot">.</span>
         </div>
 
         <!-- Desktop Menu -->
@@ -68,7 +68,7 @@
                     <a class="btn-outline" href="#contact">Contact</a>
                 </div>
             </div>
-             <div class="hero-image">
+            <div class="hero-image">
                 <div class="floating-card">
                     <div class="code-snippet">
                         <div class="code-header">
@@ -80,19 +80,19 @@
                         </div>
                         <div class="code-content">
                             <div class="code-line">
-                                <span class="keyword">const</span> 
-                                <span class="variable">developer</span> 
-                                <span class="operator">=</span> 
+                                <span class="keyword">const</span>
+                                <span class="variable">developer</span>
+                                <span class="operator">=</span>
                                 <span class="string">"passionate"</span>
                             </div>
                             <div class="code-line">
-                                <span class="keyword">function</span> 
+                                <span class="keyword">function</span>
                                 <span class="function">solveProblem</span>
-                                <span class="bracket">()</span> 
+                                <span class="bracket">()</span>
                                 <span class="bracket">{</span>
                             </div>
                             <div class="code-line indent">
-                                <span class="keyword">return</span> 
+                                <span class="keyword">return</span>
                                 <span class="string">"innovation"</span>
                             </div>
                             <div class="code-line">
@@ -186,8 +186,6 @@
                 </div>
             </a>
 
-
-
             <a href="https://github.com/PooniaHarsh" target="_blank" class="stat-item">
                 <div class="icons">
                     <i class="fab fa-github" aria-hidden="true"></i>
@@ -198,7 +196,6 @@
                 </div>
             </a>
 
-
             <a href="https://www.figma.com" target="_blank" class="stat-item">
                 <div class="icons">
                     <i class="fab fa-figma" aria-hidden="true"></i>
@@ -208,10 +205,54 @@
                     <p class="stat-label">Harsh Poonia</p>
                 </div>
             </a>
-
         </section>
 
-<!-- <div class="hero-content">
+        <!-- Dropdown Section -->
+
+        <!-- Experience Section -->
+        <section class="experience-section" id="experience-section">
+            <!-- <p class="section-label text-center">Why Choose Me</p> -->
+            <h2 class="section-title text-center">My Experience Area</h2>
+            <div class="dropdown" id="myDropdown">
+                <div class="dropdown-header">
+                    <span class="arrow-wrapper"><i class="fas fa-arrow-down"></i></span>
+                </div>
+                <div class="dropdown-content">
+                    <div class="experience-item" data-label="Facebook Marketing" data-percent="100">
+                        <div class="circle-progress">
+                            <svg>
+                                <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="circle-text">0%</div>
+                        </div>
+                        <div class="experience-label">Figma</div>
+                    </div>
+                    <div class="experience-item" data-label="Search Engine Optimization" data-percent="95">
+                        <div class="circle-progress">
+                            <svg>
+                                <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="circle-text">0%</div>
+                        </div>
+                        <div class="experience-label">HTML/CSS</div>
+                    </div>
+                    <div class="experience-item" data-label="Content Writing" data-percent="95">
+                        <div class="circle-progress">
+                            <svg>
+                                <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="circle-text">0%</div>
+                        </div>
+                        <div class="experience-label">Adobe Lightroom</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <div class="hero-content">
                 <h1 class="hero-title">
                     Hi, I'm <span class="gradient-text">Your Name</span>
                 </h1>
@@ -233,232 +274,202 @@
                 </div>
             </div> -->
 
-        
 
-        <!-- Image Gallery Section -->
-        <section id="projects" id="gallery" style="background:#f9fdfb00">
-            <div class="container">
-                <p class="text-[#f97316] font-semibold text-[50px] text-center mb-1">
-                    Projects
-                </p>
-                <h2 class="text-[#0f1a3c] font-bold text-xl sm:text-2xl text-center mb-4">
-                    My Amazing Works
-                </h2>
 
-                <!-- Personal AI Assistant (JARVIS) -->
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="images/Jarvis.png" alt="KGVS Field Work - Community Development" class="gallery-img"
-                            loading="lazy" />
-                        <div class="gallery-overlay">
-                            <h4>Personal AI Assistant(JARVIS)</h4>
-                            <p>Modern JARVIS is a personal AI assistant featuring voice commands, automation, WhatsApp
-                                integration, and interactive GUI.</p>
+            <!-- Image Gallery Section -->
+            <section id="projects" id="gallery" style="background:#f9fdfb00">
+                <div class="container">
+                    <p class="text-[#f97316] font-semibold text-[50px] text-center mb-1">
+                        Projects
+                    </p>
+                    <h2 class="text-[#0f1a3c] font-bold text-xl sm:text-2xl text-center mb-4">
+                        My Amazing Works
+                    </h2>
+
+                    <!-- Personal AI Assistant (JARVIS) -->
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="images/Jarvis.png" alt="KGVS Field Work - Community Development"
+                                class="gallery-img" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Personal AI Assistant(JARVIS)</h4>
+                                <p>Modern JARVIS is a personal AI assistant featuring voice commands, automation,
+                                    WhatsApp
+                                    integration, and interactive GUI.</p>
+                            </div>
+                        </div>
+
+                        <!-- KGVS Webpage -->
+                        <div class="gallery-item">
+                            <img src="images/KGVS.png" alt="KGVS Training Session - Skill Development"
+                                class="gallery-img" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <a href="https://kgvs.vercel.app/" target="_blank" class="overlay-link">
+                                    <h4>KGVS Webpage</h4>
+                                    <p>KGVS advances sustainable farming, women empowerment, youth employment, skill
+                                        development, organic agriculture, and SHG promotion.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/school.png" alt="KGVS Rural Development - Village Work" class="gallery-img"
+                                loading="lazy" />
+                            <div class="gallery-overlay">
+                                <a href="https://pooniaharsh.github.io/Adarsh/" target="_blank" class="overlay-link">
+                                    <h4>School Webpage</h4>
+                                    <p>
+                                        Developed a fully responsive and interactive school website with clean
+                                        UI,announcements,and academic sections.
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Carbonfootprint Webpage -->
+                        <div class="gallery-item">
+                            <img src="images/carbon.png" alt="KGVS Women Empowerment - SHG Activities"
+                                class="gallery-img" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <a href="https://www.figma.com/proto/Wv6VQc9LZBSluhZvt3FhPy/Sustainmine-figma?page-id=0%3A1&team_id=1427010162002882662&node-id=24-44&starting-point-node-id=106%3A126&scaling=scale-down-width&content-scaling=fixed&t=WEWHcERjrDNyLsGD-1"
+                                    target="_blank" class="overlay-link">
+                                    <h4>Carbonfootprint Webpage</h4>
+                                    <p>A web app that helps users calculate and neutralize their carbon footprint
+                                        through
+                                        smart
+                                        insights and data visualization.
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Generative AI Tool -->
+                        <div class="gallery-item">
+                            <img src="images/genai_image.png" alt="KGVS Sustainable Farming - Agricultural Training"
+                                class="gallery-img" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Generative AI</h4>
+                                <p>Developed a tool that converts text to speech and speech to text with a custom GUI,
+                                    adjustable settings, and easy download functionality.</p>
+                            </div>
+                        </div>
+
+                        <!-- Music Recommendation System -->
+                        <div class="gallery-item">
+                            <img src="images/music.png" alt="KGVS Youth Development - Skill Training"
+                                class="gallery-img" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Music Recommendation System</h4>
+                                <p>Developed a music recommendation system using collaborative filtering and natural
+                                    language processing.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- KGVS Webpage -->
-                    <div class="gallery-item">
-                        <img src="images/KGVS.png" alt="KGVS Training Session - Skill Development" class="gallery-img"
-                            loading="lazy" />
-                        <div class="gallery-overlay">
-                            <a href="https://kgvs.vercel.app/" target="_blank" class="overlay-link">
-                                <h4>KGVS Webpage</h4>
-                                <p>KGVS advances sustainable farming, women empowerment, youth employment, skill
-                                    development, organic agriculture, and SHG promotion.</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/school.png" alt="KGVS Rural Development - Village Work" class="gallery-img"
-                            loading="lazy" />
-                        <div class="gallery-overlay">
-                            <a href="https://pooniaharsh.github.io/Adarsh/" target="_blank" class="overlay-link">
-                                <h4>School Webpage</h4>
-                                <p>
-                                    Developed a fully responsive and interactive school website with clean
-                                    UI,announcements,and academic sections.
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Carbonfootprint Webpage -->
-                    <div class="gallery-item">
-                        <img src="images/carbon.png" alt="KGVS Women Empowerment - SHG Activities" class="gallery-img"
-                            loading="lazy" />
-                        <div class="gallery-overlay">
-                            <a href="https://www.figma.com/proto/Wv6VQc9LZBSluhZvt3FhPy/Sustainmine-figma?page-id=0%3A1&team_id=1427010162002882662&node-id=24-44&starting-point-node-id=106%3A126&scaling=scale-down-width&content-scaling=fixed&t=WEWHcERjrDNyLsGD-1"
-                                target="_blank" class="overlay-link">
-                                <h4>Carbonfootprint Webpage</h4>
-                                <p>A web app that helps users calculate and neutralize their carbon footprint through
-                                    smart
-                                    insights and data visualization.
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Generative AI Tool -->
-                    <div class="gallery-item">
-                        <img src="images/genai_image.png" alt="KGVS Sustainable Farming - Agricultural Training"
-                            class="gallery-img" loading="lazy" />
-                        <div class="gallery-overlay">
-                            <h4>Generative AI</h4>
-                            <p>Developed a tool that converts text to speech and speech to text with a custom GUI,
-                                adjustable settings, and easy download functionality.</p>
-                        </div>
-                    </div>
-
-                    <!-- Music Recommendation System -->
-                    <div class="gallery-item">
-                        <img src="images/music.png" alt="KGVS Youth Development - Skill Training" class="gallery-img"
-                            loading="lazy" />
-                        <div class="gallery-overlay">
-                            <h4>Music Recommendation System</h4>
-                            <p>Developed a music recommendation system using collaborative filtering and natural
-                                language processing.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div style="text-align:center;margin-top:92px">
+                    <!-- <div style="text-align:center;margin-top:92px">
         <p style="color:var(--muted);font-size:14px">📸 All photos showcase real field work and community impact</p>
       </div> -->
-            </div>
-        </section>
-
-
-        <!-- Services Section -->
-        <section class="services-section animate-text">
-            <div id="services" class="services-header">
-                <div class="services-title">
-                    <p class="section-label">Services</p>
-                    <h2 class="section-heading">
-                        I Provide Wide Range Of Digital Services
-                    </h2>
                 </div>
-                <div class="services-nav">
-                    <button aria-label="Previous" class="nav-btn prev">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <button aria-label="Next" class="nav-btn next">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
+            </section>
 
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="all-icon">
-                    <div class="service-icon bg-purple">
-                        <i class="fas fa-paint-brush"></i>
+
+            <!-- Services Section -->
+            <section class="services-section animate-text">
+                <div id="services" class="services-header">
+                    <div class="services-title">
+                        <p class="section-label">Services</p>
+                        <h2 class="section-heading">
+                            I Provide Wide Range Of Digital Services
+                        </h2>
                     </div>
+                    <div class="services-nav">
+                        <button aria-label="Previous" class="nav-btn prev">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button aria-label="Next" class="nav-btn next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
-                    <h3 class="service-title">UI/UX Design</h3>
-                    <p class="service-text">
-                        Designing intuitive, user-focused interfaces for seamless digital experiences.
-                    </p>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon bg-yellow">
-                        <i class="fas fa-file-code"></i>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="all-icon">
+                            <div class="service-icon bg-purple">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                        </div>
+                        <h3 class="service-title">UI/UX Design</h3>
+                        <p class="service-text">
+                            Designing intuitive, user-focused interfaces for seamless digital experiences.
+                        </p>
                     </div>
-                    <h3 class="service-title">Web Design</h3>
-                    <p class="service-text">
-                        Engineering secure, scalable, and feature-rich full-stack web applications.
-                    </p>
-                </div>
 
-                <div class="service-card">
-                    <div class="service-icon bg-pink">
-                        <i class="fa fa-robot"></i>
+                    <div class="service-card">
+                        <div class="service-icon bg-yellow">
+                            <i class="fas fa-file-code"></i>
+                        </div>
+                        <h3 class="service-title">Web Design</h3>
+                        <p class="service-text">
+                            Engineering secure, scalable, and feature-rich full-stack web applications.
+                        </p>
                     </div>
-                    <h3 class="service-title">Generative AI</h3>
-                    <p class="service-text">
-                        Creating AI-powered tools for text, image, and audio generation.
-                    </p>
-                </div>
 
-                <div class="service-card">
-                    <div class="service-icon bg-cyan">
-                        <i class="fas fa-mobile-alt"></i>
+                    <div class="service-card">
+                        <div class="service-icon bg-pink">
+                            <i class="fa fa-robot"></i>
+                        </div>
+                        <h3 class="service-title">Generative AI</h3>
+                        <p class="service-text">
+                            Creating AI-powered tools for text, image, and audio generation.
+                        </p>
                     </div>
-                    <h3 class="service-title">App Development</h3>
-                    <p class="service-text">
-                        Building scalable and user-friendly mobile and web applications.
-                    </p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Decorative circles under services -->
-        <!-- <div class="pointer-events-none absolute left-0 right-0 bottom-[-60px] flex justify-center z-0">
+                    <div class="service-card">
+                        <div class="service-icon bg-cyan">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="service-title">App Development</h3>
+                        <p class="service-text">
+                            Building scalable and user-friendly mobile and web applications.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Decorative circles under services -->
+            <!-- <div class="pointer-events-none absolute left-0 right-0 bottom-[-60px] flex justify-center z-0">
             <div class="w-32 h-32 bg-[#f97316] opacity-20 rounded-full blur-2xl absolute left-1/4"></div>
             <div class="w-24 h-24 bg-[#a78bfa] opacity-20 rounded-full blur-xl absolute left-1/2"></div>
             <div class="w-20 h-20 bg-[#fcd34d] opacity-20 rounded-full blur-lg absolute right-1/4"></div>
         </div> -->
 
-        <!-- BIG Decorative circles in the background, fixed and scrollable over -->
-        <!-- <div class="fixed inset-0 -z-10 pointer-events-none">
+            <!-- BIG Decorative circles in the background, fixed and scrollable over -->
+            <!-- <div class="fixed inset-0 -z-10 pointer-events-none">
             <div class="w-[600px] h-[600px] bg-[#f97316] opacity-60 rounded-full absolute left-[-200px] top-[60%]">
             </div>
             <div class="w-[400px] h-[400px] bg-[#a78bfa] opacity-50 rounded-full  absolute left-[50%] top-[80%]"></div>
             <div class="w-[350px] h-[350px] bg-[#fcd34d] opacity-30 rounded-full  absolute right-[-120px] top-[70%]">
             </div>
         </div> -->
-        <div class="fixed inset-0 -z-10 pointer-events-none">
-            <div class="w-[600px] h-[600px] bg-[#f97316] opacity-60 rounded-full absolute left-[-200px] top-[60%]">
-            </div>
-            <div class="w-[300px] h-[300px] bg-[#fcd34d] opacity-100 rounded-full  absolute right-[-120px] top-[41%]">
-            </div>
-            <!-- <div><img src="/images/minepic.png" alt="Decorative Circle"
+            <div class="fixed inset-0 -z-10 pointer-events-none">
+                <div class="w-[600px] h-[600px] bg-[#f97316] opacity-60 rounded-full absolute left-[-200px] top-[60%]">
+                </div>
+                <div
+                    class="w-[300px] h-[300px] bg-[#fcd34d] opacity-100 rounded-full  absolute right-[-120px] top-[41%]">
+                </div>
+                <!-- <div><img src="/images/minepic.png" alt="Decorative Circle"
                     class="w-[500px] h-[630px] object-cover rounded-[90px] opacity-100 absolute right-[0px] top-[15%]"></div> -->
-            <div class="w-[1950px] h-[1850px] bg-[#a78bfa] opacity-99 rounded-full  absolute left-[-12%] top-[70%]">
+                <div class="w-[1950px] h-[1850px] bg-[#a78bfa] opacity-99 rounded-full  absolute left-[-12%] top-[70%]">
+                </div>
             </div>
-        </div>
         </section>
 
-        <!-- Experience Section -->
-        <section class="experience-section" id="experience-section">
-            <p class="section-label text-center">Why Choose Me</p>
-            <h2 class="section-title text-center">My Experience Area</h2>
 
-            <div class="experience-grid">
-                <div class="experience-item" data-label="Facebook Marketing" data-percent="100">
-                    <div class="circle-progress">
-                        <svg>
-                            <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
-                            <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
-                        </svg>
-                        <div class="circle-text">0%</div>
-                    </div>
-                    <div class="experience-label">Figma</div>
-                </div>
 
-                <div class="experience-item" data-label="Search Engine Optimization" data-percent="95">
-                    <div class="circle-progress">
-                        <svg>
-                            <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
-                            <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
-                        </svg>
-                        <div class="circle-text">0%</div>
-                    </div>
-                    <div class="experience-label">HTML/CSS</div>
-                </div>
 
-                <div class="experience-item" data-label="Content Writing" data-percent="95">
-                    <div class="circle-progress">
-                        <svg>
-                            <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
-                            <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
-                        </svg>
-                        <div class="circle-text">0%</div>
-                    </div>
-                    <div class="experience-label">Adobe Lightroom</div>
-                </div>
 
+        <!-- <div class="experience-grid"> 
+                
                 <div class="experience-item" data-label="Youtube Marketing" data-percent="80">
                     <div class="circle-progress">
                         <svg>
@@ -512,9 +523,9 @@
                         <div class="circle-text">0%</div>
                     </div>
                     <div class="experience-label">Web Design</div>
-                </div>
+                </div> 
             </div>
-        </section>
+        </section>-->
 
 
         <!-- Projects Section -->
@@ -601,7 +612,7 @@
         <!-- Step 1 -->
         <div class="flex flex-col sm:flex-row items-center mb-16">
             <!-- Card -->
-            <div class="bg-[#00a3a3]/50 rounded-[40px] w-full sm:max-w-[700px] py-6 px-6 sm:pl-8 sm:pr-90 relative text-white font-sans shadow-lg pop-up border border-black/15"
+            <div class="bg-[#00a3a3]/50 backdrop-blur-md rounded-[40px] w-full sm:max-w-[700px] py-6 px-6 sm:pl-8 sm:pr-20 relative text-white font-sans shadow-[0_0_10px_rgba(0,0,0,0.31)] pop-up border border-black/5"
                 id="content-step-1">
                 <!-- Content -->
                 <h3 class="font-bold text-[28px] sm:text-[40px] mb-2">Chandigarh University</h3>
@@ -640,7 +651,7 @@
             </div>
             <!-- Card -->
             <div
-                class="bg-[#008080]/50 rounded-[40px] w-full sm:max-w-[700px] py-6 px-10 pl-18 pr-1 sm:pl-20 sm:pr-8 relative text-white font-sans shadow-lg pop-up border border-black/15 order-1 sm:order-2">
+                class="bg-[#008080]/50 backdrop-blur-md rounded-[40px] w-full sm:max-w-[700px] py-6 px-10 pl-18 pr-1 sm:pl-20 sm:pr-8 relative text-white font-sans shadow-[0_0_10px_rgba(0,0,0,0.31)] pop-up border border-black/5 order-1 sm:order-2">
                 <!-- Icon -->
                 <div class="absolute left-[-9px] bottom-[-20px] sm:top-[145px] sm:-left-8 sm:bottom-auto bg-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center circle-shadow pop-up delay-300"
                     id="icon-step-2">
@@ -657,7 +668,7 @@
         <!-- Step 3 -->
         <div class="flex flex-col sm:flex-row items-center mb-16 ">
             <!-- Card -->
-            <div class="bg-[#00a3a3]/50 rounded-[40px] w-full sm:max-w-[700px] py-6 px-6 sm:pl-8 sm:pr-20 relative text-white font-sans shadow-lg pop-up border border-black/15"
+            <div class="bg-[#00a3a3]/50 backdrop-blur-md rounded-[40px] w-full sm:max-w-[700px] py-6 px-6 sm:pl-8 sm:pr-20 relative text-white font-sans shadow-[0_0_10px_rgba(0,0,0,0.31)] pop-up border border-black/5"
                 id="content-step-1">
                 <!-- Content -->
                 <h3 class="font-bold text-[28px] sm:text-[40px] mb-2 leading-0">Adarsh Vidya Niketan Sen. Sec.
@@ -786,31 +797,44 @@
                 </div>
             </div>
 
-            <div class="contactMethod">
-                <div class="method">
-                    <i class="fa fa-map-marker-alt contactIcon"></i>
-                    <article class="text">
-                        <h1 class="sub-heading">Location</h1>
-                        <p class="para">chandigarh university</p>
-                    </article>
-                </div>
+           <div class="contactMethod">
 
-                <div class="method">
-                    <i class="fa fa-envelope contactIcon"></i>
-                    <article class="text">
-                        <h1 class="sub-heading">Email</h1>
-                        <p class="para">Email: harshpoonia024@gmail.com</p>
-                    </article>
-                </div>
+    <div class="method">
+        <i class="fa fa-map-marker-alt contactIcon"></i>
+        <article class="text">
+            <h1 class="sub-heading">Location</h1>
+            <p class="para">Chandigarh University</p>
+        </article>
+    </div>
 
-                <div class="method">
-                    <i class="fa fa-phone contactIcon"></i>
-                    <article class="text">
-                        <h1 class="sub-heading">Phone</h1>
-                        <p class="para">+91 12345 67890</p>
-                    </article>
-                </div>
-            </div>
+    <div class="method">
+        <i class="fa fa-envelope contactIcon"></i>
+        <article class="text">
+            <h1 class="sub-heading">Email</h1>
+            <p class="para">
+                <a href="mailto:harshpoonia024@gmail.com" style="text-decoration:none; color:inherit;">
+                    harshpoonia024@gmail.com
+                </a>
+            </p>
+        </article>
+    </div>
+
+    <div class="method">
+        <i class="fa fa-phone contactIcon"></i>
+        <article class="text">
+            <h1 class="sub-heading">Phone</h1>
+            <p class="para">
+                <a href="tel:+918209673488" style="text-decoration:none; color:inherit;">
+                    +91 8209673488
+                </a>
+            </p>
+        </article>
+    </div>
+
+</div>
+
+
+
         </div>
 
     </main>
