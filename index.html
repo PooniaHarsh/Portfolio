@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="stylee.css" />
+    <link rel="stylesheet" href="contact.css" />
 </head>
 
 <body>
@@ -19,42 +19,118 @@
             HP<span class="dot">.</span>
         </div>
 
-        <!-- Desktop Menu -->
-        <nav aria-label="Primary Navigation" class="desktop-menu">
-            <a class="active animate-text" href="#home">Home</a>
-            <a class="link animate-text" href="#services">Services</a>
-            <a class="link animate-text" href="#projects">Projects</a>
-            <div class="dropdown1 animate-text">
-                <button aria-expanded="false" aria-haspopup="true" class="dropdown-btn">
-                    <span>Blog</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
+        <div class="header-actions">
+            <!-- New Desktop Nav -->
+            <nav aria-label="Primary Navigation"
+                class="main-desktop-nav hidden md:flex items-center gap-16 bg-white/60 backdrop-blur-md border border-black/10 shadow-sm px-2 py-1 rounded-full">
+                <a class="nav-link px-4 py-2 rounded-full text-[#0f1a3c] hover:bg-orange-500 hover:text-white transition"
+                    href="#home">Home</a>
+                <a class="nav-link px-4 py-2 rounded-full text-[#0f1a3c] hover:bg-orange-500 hover:text-white transition"
+                    href="#services">Services</a>
+                <a class="nav-link px-4 py-2 rounded-full text-[#0f1a3c] hover:bg-orange-500 hover:text-white transition"
+                    href="#projects">Projects</a>
+                <a class="nav-link px-4 py-2 rounded-full text-[#0f1a3c] hover:bg-orange-500 hover:text-white transition"
+                    href="#experience-section">Experience</a>
+                <a class="nav-link px-4 py-2 rounded-full text-[#0f1a3c] hover:bg-orange-500 hover:text-white transition"
+                    href="#contact">Contact</a>
+            </nav>
+
+            <!-- Theme Toggle (mobile + desktop) -->
+            <div class="theme-toggle" title="Toggle theme">
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle" />
+                    <span class="slider">
+                        <div class="moons-hole">
+                            <div class="moon-hole"></div>
+                            <div class="moon-hole"></div>
+                            <div class="moon-hole"></div>
+                        </div>
+                        <div class="black-clouds">
+                            <div class="black-cloud"></div>
+                            <div class="black-cloud"></div>
+                            <div class="black-cloud"></div>
+                        </div>
+                        <div class="clouds">
+                            <div class="cloud"></div>
+                            <div class="cloud"></div>
+                            <div class="cloud"></div>
+                            <div class="cloud"></div>
+                            <div class="cloud"></div>
+                            <div class="cloud"></div>
+                            <div class="cloud"></div>
+                        </div>
+                        <div class="stars">
+                            <svg class="star" viewBox="0 0 20 20">
+                                <path
+                                    d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z">
+                                </path>
+                            </svg>
+                            <svg class="star" viewBox="0 0 20 20">
+                                <path
+                                    d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z">
+                                </path>
+                            </svg>
+                            <svg class="star" viewBox="0 0 20 20">
+                                <path
+                                    d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z">
+                                </path>
+                            </svg>
+                            <svg class="star" viewBox="0 0 20 20">
+                                <path
+                                    d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z">
+                                </path>
+                            </svg>
+                            <svg class="star" viewBox="0 0 20 20">
+                                <path
+                                    d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z">
+                                </path>
+                            </svg>
+                        </div>
+                    </span>
+                </label>
             </div>
-            <a class="link animate-text" href="#contact">Contact</a>
-        </nav>
 
-        <!-- Mobile Button -->
-        <button class="nav-toggle" id="nav-toggle" type="button">
-            <i class="fas fa-bars icon"></i>
-            Menu
-        </button>
+            <!-- New Mobile Button -->
+            <button id="menuButton"
+                class="md:hidden inline-flex items-center gap-2 bg-[#f97316] text-white px-3 py-2 rounded-md text-base"
+                aria-controls="mobileDrawer" aria-expanded="false" aria-label="Open navigation menu">
+                <i class="fas fa-bars"></i>
+                Menu
+            </button>
+        </div>
+    </header>
 
-        <!-- Mobile Menu -->
-        <nav id="mobile-menu" class="mobile-menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- Mobile Drawer + Backdrop -->
+    <div id="mobileBackdrop" class="fixed inset-0 bg-black/40 hidden z-[60]"></div>
+    <aside id="mobileDrawer"
+        class="fixed top-0 right-0 h-full w-72 max-w-[80vw] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-out z-[70]">
+        <div class="flex items-center justify-between px-4 py-4 border-b">
+            <div class="text-xl font-extrabold text-[#0f1a3c]">Menu</div>
+            <button id="menuClose" class="p-2 rounded-md text-[#0f1a3c] hover:bg-orange-100"
+                aria-label="Close navigation menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="p-4">
+            <ul class="space-y-2">
+                <li><a class="nav-link block px-3 py-2 rounded-lg text-[#0f1a3c] hover:bg-orange-500 hover:text-white transition"
+                        href="#home">Home</a></li>
+                <li><a class="nav-link block px-3 py-2 rounded-lg text-[#0f1a3c] hover:bg-orange-500 hover:text-white transition"
+                        href="#services">Services</a></li>
+                <li><a class="nav-link block px-3 py-2 rounded-lg text-[#0f1a3c] hover:bg-orange-500 hover:text-white transition"
+                        href="#projects">Projects</a></li>
+                <li><a class="nav-link block px-3 py-2 rounded-lg text-[#0f1a3c] hover:bg-orange-500 hover:text-white transition"
+                        href="#experience-section">Experience</a></li>
+                <li><a class="nav-link block px-3 py-2 rounded-lg text-[#0f1a3c] hover:bg-orange-500 hover:text-white transition"
+                        href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </aside>
 
 
     <main class="max-w-screen-xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
         <!-- Hero Section -->
-        <section id="home" class="hero-section animate-text">
+    <section id="home" class="hero-section">
             <div class="hero-text">
                 <p class="hero-intro">Hi, I'm</p>
                 <h1 class="hero-name">Harsh Poonia</h1>
@@ -226,7 +302,7 @@
                             </svg>
                             <div class="circle-text">0%</div>
                         </div>
-                        <div class="experience-label">Figma</div>
+                        <div class="experience-label">UI/UX Design</div>
                     </div>
                     <div class="experience-item" data-label="Search Engine Optimization" data-percent="95">
                         <div class="circle-progress">
@@ -236,9 +312,9 @@
                             </svg>
                             <div class="circle-text">0%</div>
                         </div>
-                        <div class="experience-label">HTML/CSS</div>
+                        <div class="experience-label">HTML/CSS/JS</div>
                     </div>
-                    <div class="experience-item" data-label="Content Writing" data-percent="95">
+                    <div class="experience-item" data-label="Content Writing" data-percent="70">
                         <div class="circle-progress">
                             <svg>
                                 <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
@@ -246,7 +322,7 @@
                             </svg>
                             <div class="circle-text">0%</div>
                         </div>
-                        <div class="experience-label">Adobe Lightroom</div>
+                        <div class="experience-label">Generative AI</div>
                     </div>
                 </div>
             </div>
@@ -278,16 +354,16 @@
 
             <!-- Image Gallery Section -->
             <section id="projects" id="gallery" style="background:#f9fdfb00">
-                <div class="container">
-                    <p class="text-[#f97316] font-semibold text-[50px] text-center mb-1">
+                <div class="container ">
+                    <p class="text-[#f97316] font-semibold text-[50px] text-center mb-1 animate-text">
                         Projects
                     </p>
-                    <h2 class="text-[#0f1a3c] font-bold text-xl sm:text-2xl text-center mb-4">
+                    <h2 class="text-[#0f1a3c] font-bold text-xl sm:text-2xl text-center mb-4 animate-text">
                         My Amazing Works
                     </h2>
 
                     <!-- Personal AI Assistant (JARVIS) -->
-                    <div class="gallery-grid">
+                    <div class="gallery-grid ">
                         <div class="gallery-item">
                             <img src="images/Jarvis.png" alt="KGVS Field Work - Community Development"
                                 class="gallery-img" loading="lazy" />
@@ -774,7 +850,7 @@
             <div class="contactForm glass-card">
                 <form action="https://formsubmit.co/harshpoonia024@gmail.com" method="POST">
                     <h1 class="sub-heading">Need Support !</h1>
-                    <p class="para para2">Contact us for a quote , help to join the them.</p>
+                    <p class="para para2">You can contact me by sending a message below.</p>
 
                     <input type="text" class="input" name="name" placeholder="Your Name" required>
                     <input type="email" class="input" name="email" placeholder="Your Email" required>
@@ -797,41 +873,41 @@
                 </div>
             </div>
 
-           <div class="contactMethod">
+            <div class="contactMethod">
 
-    <div class="method">
-        <i class="fa fa-map-marker-alt contactIcon"></i>
-        <article class="text">
-            <h1 class="sub-heading">Location</h1>
-            <p class="para">Chandigarh University</p>
-        </article>
-    </div>
+                <div class="method">
+                    <i class="fa fa-map-marker-alt contactIcon"></i>
+                    <article class="text">
+                        <h1 class="sub-heading">Location</h1>
+                        <p class="para">Chandigarh University</p>
+                    </article>
+                </div>
 
-    <div class="method">
-        <i class="fa fa-envelope contactIcon"></i>
-        <article class="text">
-            <h1 class="sub-heading">Email</h1>
-            <p class="para">
-                <a href="mailto:harshpoonia024@gmail.com" style="text-decoration:none; color:inherit;">
-                    harshpoonia024@gmail.com
-                </a>
-            </p>
-        </article>
-    </div>
+                <div class="method">
+                    <i class="fa fa-envelope contactIcon"></i>
+                    <article class="text">
+                        <h1 class="sub-heading">Email</h1>
+                        <p class="para">
+                            <a href="mailto:harshpoonia024@gmail.com" style="text-decoration:none; color:inherit;">
+                                harshpoonia024@gmail.com
+                            </a>
+                        </p>
+                    </article>
+                </div>
 
-    <div class="method">
-        <i class="fa fa-phone contactIcon"></i>
-        <article class="text">
-            <h1 class="sub-heading">Phone</h1>
-            <p class="para">
-                <a href="tel:+918209673488" style="text-decoration:none; color:inherit;">
-                    +91 8209673488
-                </a>
-            </p>
-        </article>
-    </div>
+                <div class="method">
+                    <i class="fa fa-phone contactIcon"></i>
+                    <article class="text">
+                        <h1 class="sub-heading">Phone</h1>
+                        <p class="para">
+                            <a href="tel:+918209673488" style="text-decoration:none; color:inherit;">
+                                +91 8209673488
+                            </a>
+                        </p>
+                    </article>
+                </div>
 
-</div>
+            </div>
 
 
 

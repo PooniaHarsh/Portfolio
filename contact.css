@@ -174,7 +174,7 @@ form {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(47, 44, 44, 0.117);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 2.5rem 2rem;
     /* max-width: ; */
     text-align: center;
@@ -194,4 +194,16 @@ form {
         flex-direction: row;
         justify-content: space-between;
     }
+}
+
+/* Dark mode: make contact section text white */
+body.dark .contact-form,
+body.dark .contact-form .heading,
+body.dark .contact-form .sub-heading,
+body.dark .contact-form .para,
+body.dark .contact-form .text,
+body.dark .contactMethod .sub-heading,
+body.dark .contactMethod .para,
+body.dark .glass-card {
+    color: #ffffff !important;
 }
