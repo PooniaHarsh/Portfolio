@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Button</title>
+  <style>
+    .dl-button {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      background: #222;
+      border-radius: 40px;
+      cursor: pointer;
+      overflow: hidden;
+      color: #fff;
+      font-family: sans-serif;
+    }
+
+    .dl-button > div.icon div svg {
+      width: 20px;
+      height: 18px;
+      display: block;
+      margin-top: 2px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .dl-button > div .icon div svg.arrow {
+      color: #fff;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      transform: translateY(-1px);
+    }
+
+    .dl-button > div .icon div svg.shape {
+      color: var(--color, #0af);
+      transition: color 0.4s ease;
+    }
+
+    .dl-button > div .icon span {
+      --s: 1;
+      position: absolute;
+      left: 1px;
+      right: 1px;
+      bottom: 2px;
+      background: var(--color, #0af);
+      height: 6px;
+      border-radius: 50%;
+      display: block;
+      transform: translateY(0) scale(var(--s));
+    }
+
+    .dl-button > div .label {
+      --color: var(--grey-dark, #aaa);
+      line-height: 22px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color, #fff);
+      position: relative;
+      transition: color 0.4s ease;
+      transform: translateX(8px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dl-button">
+    <div class="icon">
+      <div>
+        <!-- Arrow Icon -->
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 16l-6-6h12l-6 6z"/>
+        </svg>
+        <!-- Shape Icon -->
+        <svg class="shape" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10"/>
+        </svg>
+      </div>
+      <span></span>
+    </div>
+    <div class="label">Download</div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('.dl-button').on('click', e => {
+      let btn = $(e.currentTarget),
+          label = btn.find('.label'),
+          counter = label.find('.counter');
+
+      if (!(btn.hasClass('active') || btn.hasClass('done'))) {
+        btn.addClass('active');
+        setTimeout(() => {
+          label.addClass('hide');
+          counter.animate(
+            { width: 40 },
+            400,
+            function () {
+              btn.removeClass('active').addClass('done');
+            }
+          );
+        }, 400);
+      }
+    });
+  </script>
+
+</body>
+</html>

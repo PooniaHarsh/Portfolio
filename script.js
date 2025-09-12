@@ -1,3 +1,43 @@
+// Download CV button animation and progress (with filling background and percent)
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('downloadCVBtn');
+  if (!btn) return;
+  btn.style.position = 'relative';
+  btn.style.overflow = 'hidden';
+  const progressBg = btn.querySelector('.btn-progress-bg');
+  const btnText = btn.querySelector('.btn-text');
+  const btnPercent = btn.querySelector('.btn-percent');
+  btn.addEventListener('click', function (e) {
+    if (btn.classList.contains('downloading') || btn.classList.contains('downloaded')) return;
+    btn.classList.add('downloading');
+    btnText.textContent = 'Downloading...';
+    btnPercent.style.display = 'inline';
+    progressBg.style.width = '0%';
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress += Math.random() * 18 + 8; // random progress for effect
+      if (progress > 100) progress = 100;
+      progressBg.style.width = progress + '%';
+      btnPercent.textContent = Math.floor(progress) + '%';
+      if (progress >= 100) {
+        clearInterval(interval);
+        setTimeout(() => {
+          btn.classList.remove('downloading');
+          btn.classList.add('downloaded');
+          btnText.textContent = 'Downloaded!';
+          btnPercent.textContent = '';
+          progressBg.style.width = '100%';
+          setTimeout(() => {
+            btn.classList.remove('downloaded');
+            btnText.textContent = 'Download CV';
+            btnPercent.style.display = 'none';
+            progressBg.style.width = '0%';
+          }, 2000);
+        }, 400);
+      }
+    }, 180);
+  });
+});
 
     // New mobile drawer controls
     const menuButton = document.getElementById('menuButton');

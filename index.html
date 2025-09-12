@@ -140,7 +140,13 @@
                     with clean and modern design.
                 </p>
                 <div class="hero-buttons">
-                    <a href="HarshpooniaCV.pdf" download class="btn-primary">Download CV</a>
+                    <a href="HarshpooniaCV.pdf" download class="btn-primary" id="downloadCVBtn">
+                                                <span class="btn-progress-bg" style="position:absolute;left:0;top:0;height:100%;width:0%;background:#f97316;z-index:1;border-radius:inherit;transition:width 0.3s;"></span>
+                                                <span class="btn-content" style="position:relative;z-index:2;display:flex;align-items:center;justify-content:center;width:100%;height:100%;">
+                                                    <span class="btn-text">Download CV</span>
+                                                    <span class="btn-percent" style="margin-left:8px;display:none;font-weight:600;">0%</span>
+                                                </span>
+                    </a>
                     <a class="btn-outline" href="#contact">Contact</a>
                 </div>
             </div>
