@@ -1117,11 +1117,19 @@ body.dark .typing {
     white-space: nowrap;
     overflow: hidden;
     width: 0;
-    animation: typing 3s steps(25) infinite, blink 0.75s step-end infinite;
+    /* Add a pause at full text: 5s total so 20% (50%->70%) = 1s hold */
+    /* Match steps to character count (18) so the whole word shows */
+    animation: typing 5s steps(18) infinite, blink 0.75s step-end infinite;
     font-weight: 600;
     font-size: 2rem;
     color: #0f1a3c;
     margin-bottom: 0.75rem;
+}
+
+/* When JS controls typing, keep only the caret blink and let width be auto */
+.typing.typing-js {
+    animation: blink 0.75s step-end infinite !important;
+    width: auto !important;
 }
 
 @keyframes typing {
@@ -1130,7 +1138,12 @@ body.dark .typing {
     }
 
     50% {
-        width: 15ch;
+        width: 16ch;
+    }
+
+    /* Hold the width to create a pause after completing the text */
+    70% {
+        width: 16ch;
     }
 
     100% {
