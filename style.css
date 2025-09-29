@@ -867,6 +867,10 @@ body.dark .site-header input+.slider .black-clouds {
     transition: max-height 0.5s ease, padding 0.5s ease;
     padding: 0 20px;
     /* only side padding when closed */
+    /* Arrange experience circles in a grid */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 .dropdown-content p {
@@ -878,6 +882,36 @@ body.dark .site-header input+.slider .black-clouds {
     max-height: 1000px;
     /* big enough to fit your largest content */
     padding: 20px;
+}
+
+/* Two columns on small+ screens */
+@media (min-width: 640px) {
+    .dropdown-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: make experience list scrollable within dropdown */
+@media (max-width: 639px) {
+    .dropdown.active .dropdown-content {
+        max-height: 60vh; /* constrain height on small screens */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* smooth momentum scrolling on iOS */
+    }
+    .dropdown-content {
+        grid-template-columns: 1fr; /* explicit single column on mobile */
+    }
+    /* Optional: subtle scrollbar */
+    .dropdown-content::-webkit-scrollbar {
+        width: 6px;
+    }
+    .dropdown-content::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+    }
+    body.dark .dropdown-content::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+    }
 }
 
 
@@ -1789,17 +1823,47 @@ body.dark .typing {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0;
     
     /* mb-10 */
 }
 
 /* Circle progress bar container */
 .circle-progress {
+    /* Layout updated to stack SVG and percent text vertically */
     position: relative;
     width: 100px;
-    height: 100px;
+    height: auto;
     margin: 0 auto 0.5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Icon overlay centered inside the circle */
+.circle-progress .circle-icon {
+    position: absolute;
+    /* center over the 100x100 SVG area */
+    top: 50px;
+    left: 50px;
+    transform: translate(-50%, -50%);
+    color: #0f1a3c;
+    font-size: 28px;
+    line-height: 1;
+    pointer-events: none;
+}
+
+body.dark .circle-progress .circle-icon {
+    color: var(--text);
+}
+
+/* Ensure image icons scale neatly inside the circle */
+.circle-progress .circle-icon img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 8px;
+    filter: none;
 }
 
 /* SVG styles */
@@ -1828,13 +1892,14 @@ circle {
 
 /* Centered percentage text */
 .circle-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* Place the percent text under the circle instead of inside it */
+    position: static;
+    transform: none;
+    margin-top: 0.5rem;
+    text-align: center;
     font-weight: 700;
     color: #0f1a3c;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     user-select: none;
 }
 

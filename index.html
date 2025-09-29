@@ -6,6 +6,9 @@
     <title>
         Harsh Poonia Portfolio
     </title>
+    <!-- Favicon: match navbar logo 'HP.' -->
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
@@ -130,7 +133,7 @@
 
     <main class="max-w-screen-xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
         <!-- Hero Section -->
-    <section id="home" class="hero-section">
+        <section id="home" class="hero-section">
             <div class="hero-text">
                 <p class="hero-intro">Hi, I'm</p>
                 <h1 class="hero-name">Harsh Poonia</h1>
@@ -141,11 +144,13 @@
                 </p>
                 <div class="hero-buttons">
                     <a href="HarshpooniaCV.pdf" download class="btn-primary" id="downloadCVBtn">
-                                                <span class="btn-progress-bg" style="position:absolute;left:0;top:0;height:100%;width:0%;background:#f97316;z-index:1;border-radius:inherit;transition:width 0.3s;"></span>
-                                                <span class="btn-content" style="position:relative;z-index:2;display:flex;align-items:center;justify-content:center;width:100%;height:100%;">
-                                                    <span class="btn-text">Download CV</span>
-                                                    <span class="btn-percent" style="margin-left:8px;display:none;font-weight:600;">0%</span>
-                                                </span>
+                        <span class="btn-progress-bg"
+                            style="position:absolute;left:0;top:0;height:100%;width:0%;background:#f97316;z-index:1;border-radius:inherit;transition:width 0.3s;"></span>
+                        <span class="btn-content"
+                            style="position:relative;z-index:2;display:flex;align-items:center;justify-content:center;width:100%;height:100%;">
+                            <span class="btn-text">Download CV</span>
+                            <span class="btn-percent" style="margin-left:8px;display:none;font-weight:600;">0%</span>
+                        </span>
                     </a>
                     <a class="btn-outline" href="#contact">Contact</a>
                 </div>
@@ -306,6 +311,9 @@
                                 <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
                                 <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
                             </svg>
+                            <div class="circle-icon">
+                                <img src="Icons/figma.png" alt="Figma icon" />
+                            </div>
                             <div class="circle-text">0%</div>
                         </div>
                         <div class="experience-label">UI/UX Design</div>
@@ -316,6 +324,7 @@
                                 <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
                                 <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
                             </svg>
+                            <div class="circle-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
                             <div class="circle-text">0%</div>
                         </div>
                         <div class="experience-label">HTML/CSS/JS</div>
@@ -326,9 +335,82 @@
                                 <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
                                 <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
                             </svg>
+                            <div class="circle-icon">
+                                <img src="Icons/gen.png" alt="gen ai" />
+                            </div>
                             <div class="circle-text">0%</div>
                         </div>
                         <div class="experience-label">Generative AI</div>
+                    </div>
+
+                    <!-- Additional icons as requested -->
+                    <div class="experience-item" data-label="Git" data-percent="85">
+                        <div class="circle-progress">
+                            <svg>
+                                <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="circle-icon">
+                                <img src="Icons/git.png" alt="Git icon" />
+                            </div>
+                            <div class="circle-text">0%</div>
+                        </div>
+                        <div class="experience-label">Git</div>
+                    </div>
+
+                    <div class="experience-item" data-label="Blender" data-percent="70">
+                        <div class="circle-progress">
+                            <svg>
+                                <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="circle-icon">
+                                <img src="Icons/blender.avif" alt="Blender icon" />
+                            </div>
+                            <div class="circle-text">0%</div>
+                        </div>
+                        <div class="experience-label">Blender</div>
+                    </div>
+
+                    <div class="experience-item" data-label="Lightroom" data-percent="85">
+                        <div class="circle-progress">
+                            <svg>
+                                <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="circle-icon">
+                                <img src="Icons/Adobe-Lightroom-Logo-Photo-Editing-768x768.webp" alt="Lightroom icon" />
+                            </div>
+                            <div class="circle-text">0%</div>
+                        </div>
+                        <div class="experience-label">Adobe Lightroom</div>
+                    </div>
+
+                    <div class="experience-item" data-label="Custom Tool" data-percent="80">
+                        <div class="circle-progress">
+                            <svg>
+                                <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="circle-icon">
+                                <img src="Icons/unity.png" alt="Unity" />
+                            </div>
+                            <div class="circle-text">0%</div>
+                        </div>
+                        <div class="experience-label">Unity</div>
+                    </div>
+                    <div class="experience-item" data-label="Custom Tool" data-percent="85">
+                        <div class="circle-progress">
+                            <svg>
+                                <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="circle-bar" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="circle-icon">
+                                <img src="Icons/unreal.png" alt="Unreal Engine" />
+                            </div>
+                            <div class="circle-text">0%</div>
+                        </div>
+                        <div class="experience-label">Unreal Engine</div>
                     </div>
                 </div>
             </div>
